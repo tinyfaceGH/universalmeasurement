@@ -1,0 +1,151 @@
+{
+    "liquidvolume": [
+        {
+            "item": "Drop of Water",
+            "units": "milliliter",
+            "volume": 0.05,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ drops of water."
+        },
+        {
+            "item": "Teaspoon of Cough Syrup",
+            "units": "teaspoon",
+            "volume": 1,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ teaspoons of cough syrup."
+        },
+        {
+            "item": "Travel-Size Perfume Vial",
+            "units": "milliliter",
+            "volume": 10,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ travel-size perfume vials."
+        },
+        {
+            "item": "Tablespoon of Olive Oil",
+            "units": "tablespoon",
+            "volume": 1,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ tablespoons of olive oil."
+        },
+        {
+            "item": "Single Shot of Espresso",
+            "units": "milliliter",
+            "volume": 30,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ single espresso shots."
+        },
+        {
+            "item": "Small Yogurt Drink",
+            "units": "milliliter",
+            "volume": 100,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ small yogurt drinks."
+        },
+        {
+            "item": "Juice Box",
+            "units": "milliliter",
+            "volume": 200,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ juice boxes."
+        },
+        {
+            "item": "Glass of Milk",
+            "units": "milliliter",
+            "volume": 240,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ glasses of milk."
+        },
+        {
+            "item": "Standard Soda Can",
+            "units": "ounce",
+            "volume": 12,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ standard soda cans."
+        },
+        {
+            "item": "Single-Use Water Bottle",
+            "units": "milliliter",
+            "volume": 500,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ single-use water bottles."
+        },
+        {
+            "item": "Non-Alcoholic Wine Bottle",
+            "units": "milliliter",
+            "volume": 750,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ standard non-alcoholic wine bottles."
+        },
+        {
+            "item": "Carton of Orange Juice",
+            "units": "liter",
+            "volume": 1,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ one-liter orange juice cartons."
+        },
+        {
+            "item": "Large Soda Bottle",
+            "units": "liter",
+            "volume": 2,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ two-liter soda bottles."
+        },
+        {
+            "item": "Gallon Jug of Pink Lemonade",
+            "units": "gallon",
+            "volume": 1,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ gallon jugs of pink lemonade."
+        },
+        {
+            "item": "Five-Gallon Water Cooler Bottle",
+            "units": "gallon",
+            "volume": 5,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ five-gallon water cooler bottles."
+        },
+        {
+            "item": "Filled Bathtub",
+            "units": "liter",
+            "volume": 150,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ filled bathtubs."
+        },
+        {
+            "item": "Rain Barrel",
+            "units": "gallon",
+            "volume": 55,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ full 55-gallon rain barrels."
+        },
+        {
+            "item": "Residential Hot Tub",
+            "units": "liter",
+            "volume": 1200,
+            "useIf": 0.5,
+            "sentencePortion": "The volume of _ filled residential hot tubs."
+        },
+        {
+            "item": "Water Tanker Truck",
+            "units": "kiloliter",
+            "volume": 20,
+            "useIf": 0.5,
+            "sentencePortion": "The volume of _ full water tanker trucks."
+        },
+        {
+            "item": "Olympic-Size Swimming Pool",
+            "units": "kiloliter",
+            "volume": 2500,
+            "useIf": 0.5,
+            "sentencePortion": "The volume of _ Olympic-size swimming pools."
+        },
+        {
+            "item": "Earth's Ocean",
+            "units": "gallon",
+            "volume": 352670000000000000000,
+            "useIf": 0.01,
+            "sentencePortion": "The estimated volume of Earth's ocean."
+        }
+    ]
+}

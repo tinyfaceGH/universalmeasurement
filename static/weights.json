@@ -1,0 +1,144 @@
+{
+    "weights": [
+        {
+            "item": "Grain of Rice",
+            "units": "milligram",
+            "weight": 25,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ grains of uncooked rice."
+        },
+        {
+            "item": "Paper Clip",
+            "units": "gram",
+            "weight": 1,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ standard paper clips."
+        },
+        {
+            "item": "U.S. Dime",
+            "units": "gram",
+            "weight": 2.268,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ U.S. dimes."
+        },
+        {
+            "item": "Teaspoon of Sugar",
+            "units": "gram",
+            "weight": 4,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ teaspoons of granulated sugar."
+        },
+        {
+            "item": "AA Battery",
+            "units": "gram",
+            "weight": 23,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ AA alkaline batteries."
+        },
+        {
+            "item": "Tennis Ball",
+            "units": "gram",
+            "weight": 57,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ tennis balls."
+        },
+        {
+            "item": "Apple",
+            "units": "gram",
+            "weight": 180,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ medium-sized apples."
+        },
+        {
+            "item": "Paperback Book",
+            "units": "gram",
+            "weight": 300,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ paperback books."
+        },
+        {
+            "item": "Basketball",
+            "units": "gram",
+            "weight": 620,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ regulation basketballs."
+        },
+        {
+            "item": "Laptop Computer",
+            "units": "kilogram",
+            "weight": 1.5,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ laptop computers."
+        },
+        {
+            "item": "Bowling Ball",
+            "units": "pound",
+            "weight": 15,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ 15-pound bowling balls."
+        },
+        {
+            "item": "Bicycle",
+            "units": "pound",
+            "weight": 26,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ bicycles."
+        },
+        {
+            "item": "Golden Retriever",
+            "units": "kilogram",
+            "weight": 30,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ adult golden retrievers."
+        },
+        {
+            "item": "Adult Human",
+            "units": "kilogram",
+            "weight": 70,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ average-sized adults."
+        },
+        {
+            "item": "Giant Panda",
+            "units": "kilogram",
+            "weight": 100,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ adult giant pandas."
+        },
+        {
+            "item": "Grand Piano",
+            "units": "kilogram",
+            "weight": 300,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ grand pianos."
+        },
+        {
+            "item": "Horse",
+            "units": "kilogram",
+            "weight": 500,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ adult horses."
+        },
+        {
+            "item": "Passenger Car",
+            "units": "kilogram",
+            "weight": 1500,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ passenger cars."
+        },
+        {
+            "item": "African Bush Elephant",
+            "units": "kilogram",
+            "weight": 6000,
+            "useIf": 0.5,
+            "sentencePortion": "The weight of _ adult African bush elephants."
+        },
+        {
+            "item": "Blue Whale",
+            "units": "ton",
+            "weight": 120,
+            "useIf": 0.5,
+            "sentencePortion": "The weight of _ adult blue whales."
+        }
+    ]
+}

@@ -1,0 +1,144 @@
+{
+    "lengths": [
+        {
+            "item": "Ant",
+            "units": "millimeter",
+            "length": 0.75,
+            "useIf": 1,
+            "sentencePortion": "The length of _ ants."
+        },
+        {
+            "item": "Golf Ball",
+            "units": "inch",
+            "length": 1.68,
+            "useIf": 1,
+            "sentencePortion": "_ times the diameter of a golf ball."
+        },
+        {
+            "item": "AA Battery",
+            "units": "millimeter",
+            "length": 50.5,
+            "useIf": 1,
+            "sentencePortion": "The length of _ AA batteries."
+        },
+        {
+            "item": "Light Bulb",
+            "units": "inch",
+            "length": 2.375,
+            "useIf": 1,
+            "sentencePortion": "The diameter of _ A19 lightbulbs."
+        },
+        {
+            "item": "Apple",
+            "units": "inch",
+            "length": 3,
+            "useIf": 1,
+            "sentencePortion": "The height of _ apples."
+        },
+        {
+            "item": "Orange",
+            "units": "inch",
+            "length": 3,
+            "useIf": 1,
+            "sentencePortion": "The height of _ oranges."
+        },
+        {
+            "item": "Rubber Duck",
+            "units": "inch",
+            "length": 4,
+            "useIf": 1,
+            "sentencePortion": "The height of _ rubber ducks."
+        },
+        {
+            "item": "Plastic Fork",
+            "units": "inch",
+            "length": 6,
+            "useIf": 1,
+            "sentencePortion": "The length of _ plastic forks."
+        },
+        {
+            "item": "Steam Machine",
+            "units": "inch",
+            "length": 6.39,
+            "useIf": 1,
+            "sentencePortion": "The height of _ Steam Machines (not affiliated (yet))."
+        },
+        {
+            "item": "Pencil",
+            "units": "inch",
+            "length": 7.5,
+            "useIf": 0.5,
+            "sentencePortion": "The length of _ pencils."
+        },
+        {
+            "item": "Toothbrush",
+            "units": "inch",
+            "length": 8,
+            "useIf": 1,
+            "sentencePortion": "The length of _ toothbrushes."
+        },
+        {
+            "item": "American Ruler",
+            "units": "inch",
+            "length": 12,
+            "useIf": 0.5,
+            "sentencePortion": "The length of _ American rulers."
+        },
+        {
+            "item": "Medium-Sized Wooden Rolling Pin",
+            "units": "centimeter",
+            "length": 38,
+            "useIf": 1,
+            "sentencePortion": "The length of _ rolling pins."
+        },
+        {
+            "item": "Rain Umbrella",
+            "units": "inch",
+            "length": 36,
+            "useIf": 1,
+            "sentencePortion": "The length of _ standard rain umbrellas."
+        },
+        {
+            "item": "Bass Guitar",
+            "units": "foot",
+            "length": 4,
+            "useIf": 1,
+            "sentencePortion": "The length of _ bass guitars."
+        },
+        {
+            "item": "Adult Human",
+            "units": "meter",
+            "length": 1.7,
+            "useIf": 1,
+            "sentencePortion": "The height of _ average adults."
+        },
+        {
+            "item": "U.S. School Bus",
+            "units": "foot",
+            "length": 45,
+            "useIf": 1,
+            "sentencePortion": "The length of _ full-sized U.S. school buses."
+        },
+        {
+            "item": "Olympic-Size Swimming Pool",
+            "units": "meter",
+            "length": 50,
+            "useIf": 0.5,
+            "sentencePortion": "The length of _ Olympic-size swimming pools."
+        },
+        {
+            "item": "Earth",
+            "units": "mile",
+            "length": 7926.38,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the diameter of Earth."
+        },
+        {
+            "item": "Earth's Sun",
+            "units": "mile",
+            "length": 864600,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the diameter of Earth's Sun."
+        }
+    ]
+}

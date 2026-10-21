@@ -1,0 +1,144 @@
+{
+    "temperatures": [
+        {
+            "item": "Cosmic Microwave Background",
+            "units": "kelvin",
+            "temperature": 2.725,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature of the cosmic microwave background."
+        },
+        {
+            "item": "Liquid Helium Boiling Point",
+            "units": "kelvin",
+            "temperature": 4.2,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which helium boils at standard atmospheric pressure."
+        },
+        {
+            "item": "Liquid Nitrogen Boiling Point",
+            "units": "kelvin",
+            "temperature": 77.36,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which nitrogen boils at standard atmospheric pressure."
+        },
+        {
+            "item": "Dry Ice Sublimation Temperature",
+            "units": "celsius",
+            "temperature": -78.5,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which dry ice sublimates at standard atmospheric pressure."
+        },
+        {
+            "item": "Mercury Freezing Point",
+            "units": "celsius",
+            "temperature": -38.83,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which mercury freezes."
+        },
+        {
+            "item": "Household Freezer",
+            "units": "celsius",
+            "temperature": -18,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature inside a typical household freezer."
+        },
+        {
+            "item": "Water Freezing Point",
+            "units": "celsius",
+            "temperature": 0,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which pure water freezes at standard pressure."
+        },
+        {
+            "item": "Household Refrigerator",
+            "units": "celsius",
+            "temperature": 4,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature inside a typical household refrigerator."
+        },
+        {
+            "item": "Room Temperature",
+            "units": "celsius",
+            "temperature": 22,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature of a typical room."
+        },
+        {
+            "item": "Human Body Temperature",
+            "units": "fahrenheit",
+            "temperature": 98.6,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the average absolute temperature of a healthy human body."
+        },
+        {
+            "item": "Hot Summer Day",
+            "units": "celsius",
+            "temperature": 40,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature on a very hot summer day."
+        },
+        {
+            "item": "Hot Coffee",
+            "units": "celsius",
+            "temperature": 60,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature of a cup of hot coffee."
+        },
+        {
+            "item": "Water Boiling Point",
+            "units": "celsius",
+            "temperature": 100,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which pure water boils at standard pressure."
+        },
+        {
+            "item": "Baking Oven",
+            "units": "fahrenheit",
+            "temperature": 350,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature of an oven set to 350 degrees Fahrenheit."
+        },
+        {
+            "item": "Lead Melting Point",
+            "units": "celsius",
+            "temperature": 327.46,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which lead melts."
+        },
+        {
+            "item": "Molten Lava",
+            "units": "celsius",
+            "temperature": 1100,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature of typical hot basaltic lava."
+        },
+        {
+            "item": "Iron Melting Point",
+            "units": "celsius",
+            "temperature": 1538,
+            "useIf": 1,
+            "sentencePortion": "_ times the absolute temperature at which iron melts."
+        },
+        {
+            "item": "Surface of Earth's Sun",
+            "units": "kelvin",
+            "temperature": 6000,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the estimated absolute temperature of the surface of Earth's Sun."
+        },
+        {
+            "item": "Lightning Channel",
+            "units": "kelvin",
+            "temperature": 30000,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the estimated absolute temperature of a lightning channel."
+        },
+        {
+            "item": "Core of Earth's Sun",
+            "units": "kelvin",
+            "temperature": 15000000,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the estimated absolute temperature at the center of Earth's Sun."
+        }
+    ]
+}

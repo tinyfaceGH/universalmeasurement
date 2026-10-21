@@ -1,0 +1,144 @@
+{
+    "dryvolume": [
+        {
+            "item": "Grain of Rice",
+            "units": "teaspoon",
+            "volume": 0.004,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ grains of uncooked rice."
+        },
+        {
+            "item": "Green Pea",
+            "units": "teaspoon",
+            "volume": 0.03,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ green peas."
+        },
+        {
+            "item": "Small Marble",
+            "units": "teaspoon",
+            "volume": 0.42,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ small marbles."
+        },
+        {
+            "item": "Six-Sided Die",
+            "units": "teaspoon",
+            "volume": 0.83,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ standard six-sided dice."
+        },
+        {
+            "item": "AA Battery",
+            "units": "liter",
+            "volume": 0.0083,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ AA batteries."
+        },
+        {
+            "item": "Ping-Pong Ball",
+            "units": "liter",
+            "volume": 0.0335,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ ping-pong balls."
+        },
+        {
+            "item": "Golf Ball",
+            "units": "liter",
+            "volume": 0.0407,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ golf balls."
+        },
+        {
+            "item": "Chicken Egg",
+            "units": "liter",
+            "volume": 0.06,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ large chicken eggs."
+        },
+        {
+            "item": "Tennis Ball",
+            "units": "liter",
+            "volume": 0.157,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ tennis balls."
+        },
+        {
+            "item": "Baseball",
+            "units": "liter",
+            "volume": 0.21,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ baseballs."
+        },
+        {
+            "item": "Apple",
+            "units": "liter",
+            "volume": 0.25,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ apples."
+        },
+        {
+            "item": "Paperback Book",
+            "units": "liter",
+            "volume": 0.72,
+            "useIf": 1,
+            "sentencePortion": "The volume occupied by _ paperback books."
+        },
+        {
+            "item": "Clay Brick",
+            "units": "liter",
+            "volume": 1.7,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ standard clay bricks."
+        },
+        {
+            "item": "Bowling Ball",
+            "units": "liter",
+            "volume": 5.45,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ bowling balls."
+        },
+        {
+            "item": "Basketball",
+            "units": "liter",
+            "volume": 7.2,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ basketballs."
+        },
+        {
+            "item": "Shoebox",
+            "units": "liter",
+            "volume": 10,
+            "useIf": 1,
+            "sentencePortion": "The space occupied by _ shoeboxes."
+        },
+        {
+            "item": "Medium Moving Box",
+            "units": "liter",
+            "volume": 60,
+            "useIf": 1,
+            "sentencePortion": "The space occupied by _ medium moving boxes."
+        },
+        {
+            "item": "Washing Machine",
+            "units": "cubic meter",
+            "volume": 0.3,
+            "useIf": 1,
+            "sentencePortion": "The exterior volume of _ washing machines."
+        },
+        {
+            "item": "Household Refrigerator",
+            "units": "cubic meter",
+            "volume": 0.8,
+            "useIf": 1,
+            "sentencePortion": "The exterior volume of _ household refrigerators."
+        },
+        {
+            "item": "20-Foot Shipping Container",
+            "units": "cubic meter",
+            "volume": 38.5,
+            "useIf": 0.5,
+            "sentencePortion": "The exterior volume of _ 20-foot shipping containers."
+        }
+    ]
+}
