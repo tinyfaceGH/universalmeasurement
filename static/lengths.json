@@ -78,6 +78,13 @@
             "sentencePortion": "The length of _ toothbrushes."
         },
         {
+            "item": "Kirby",
+            "units": "inch",
+            "length": 8,
+            "useIf": 1,
+            "sentencePortion": "The height of _ Kirbys."
+        },
+        {
             "item": "American Ruler",
             "units": "inch",
             "length": 12,
@@ -104,6 +111,13 @@
             "length": 4,
             "useIf": 1,
             "sentencePortion": "The length of _ bass guitars."
+        },
+        {
+            "item": "Shedletsky (Robloxian)",
+            "units": "meter",
+            "length": 1.5,
+            "useIf": 1,
+            "sentencePortion": "The height of _ Shedletskies."
         },
         {
             "item": "Adult Human",
