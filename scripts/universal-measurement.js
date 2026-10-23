@@ -82,6 +82,9 @@ const infoButtonElem = document.getElementById("infoButton");
 const infoModalElem = document.getElementById("infoModal");
 const closeInfoButtonElem = infoModalElem.querySelector(".close");
 
+// Dark Mode Toggle Button
+const darkModeButtonElem = document.getElementById("darkModeButton");
+
 // Global variables
 let currentTab = null;
 let currentMeasurementSystem = "metric";
@@ -2641,4 +2644,8 @@ document.addEventListener("keydown", (event) => {
             first.focus();
         }
     }
+});
+
+darkModeButtonElem.addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
 });
