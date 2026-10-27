@@ -99,326 +99,328 @@
     </head>
     <!-- Body -->
     <body class="pageLoading">
-        <!-- Page loading stuffs -->
-        <div id="pageLoadingOverlay" role="status" aria-live="polite" aria-label="Loading Universal Measurement webtool...">
-            <div class="pageLoadingContent">
-                <div class="loadingSpinner" aria-hidden="true"></div>
-                <h2>Universal Measurement Webtool</h2>
-                <p>Loading...</p>
-            </div>
-        </div>
-        <div id="page-container">
-            <div id="content-wrap">
-                <!-- Title -->
-                <h1>Universal Measurement Webtool</h1>
-                <!-- Tab links -->
-                <div class="tab">
-                    <button type="button" class="rootTabLinks" aria-controls="Length/Width/Height" aria-pressed="false" onClick="displayOptions(event, 'Length')">Length/Width/Height</button>
-                    <button type="button" class="rootTabLinks" aria-controls="Mass/Weight" aria-pressed="false" onClick="displayOptions(event, 'Mass')">Mass/Weight</button>
-                    <button type="button" class="rootTabLinks" aria-controls="Volume (Liquid)" aria-pressed="false" onClick="displayOptions(event, 'Liquid')">Volume (Liquid)</button>
-                    <button type="button" class="rootTabLinks" aria-controls="Volume (Dry)" aria-pressed="false" onClick="displayOptions(event, 'Dry')">Volume (Dry)</button>
-                    <button type="button" class="rootTabLinks" aria-controls="Time" aria-pressed="false" onClick="displayOptions(event, 'Time')">Time/Age</button>
-                    <button type="button" class="rootTabLinks" aria-controls="Temperature" aria-pressed="false" onClick="displayOptions(event, 'Temperature')">Temperature</button>
-                </div>
-
-                <!-- Tab content -->
-                <div id="Length" class="rootTabContent">
-                    <h3>Length/Width/Height</h3>
-                    <div class="tab">
-                        <button type="button" class="subTabLinks" aria-controls="Length-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Length-Imperial', 'imperial')">Imperial</button>
-                        <button type="button" class="subTabLinks" aria-controls="Length-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Length-Metric', 'metric')">Metric</button>
-                    </div>
-                    <div id="Length-Imperial" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="inch">Inches</label>
-                            <input type="number" id="inch" name="inch" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="foot">Feet</label>
-                            <input type="number" id="foot" name="foot" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="yard">Yards</label>
-                            <input type="number" id="yard" name="yard" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="mile">Miles</label>
-                            <input type="number" id="mile" name="mile" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                    <div id="Length-Metric" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="millimeter">Millimeters</label>
-                            <input type="number" id="millimeter" name="millimeter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="centimeter">Centimeters</label>
-                            <input type="number" id="centimeter" name="centimeter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="meter">Meters</label>
-                            <input type="number" id="meter" name="meter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="kilometer">Kilometers</label>
-                            <input type="number" id="kilometer" name="kilometer" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <div id="Mass" class="rootTabContent">
-                    <h3>Mass/Weight</h3>
-                    <div class="tab">
-                        <button type="button" class="subTabLinks" aria-controls="Mass-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Mass-Imperial', 'imperial')">Imperial</button>
-                        <button type="button" class="subTabLinks" aria-controls="Mass-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Mass-Metric', 'metric')">Metric</button>
-                    </div>
-                    <div id="Mass-Imperial" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="ounce">Ounces</label>
-                            <input type="number" id="ounce" name="ounce" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="pound">Pounds</label>
-                            <input type="number" id="pound" name="pound" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="ton">Tons</label>
-                            <input type="number" id="ton" name="ton" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                    <div id="Mass-Metric" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="milligram">Milligrams</label>
-                            <input type="number" id="milligram" name="milligram" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="gram">Grams</label>
-                            <input type="number" id="gram" name="gram" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="kilogram">Kilograms</label>
-                            <input type="number" id="kilogram" name="kilogram" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <div id="Liquid" class="rootTabContent">
-                    <h3>Volume (Liquid)</h3>
-                    <div class="tab">
-                        <button type="button" class="subTabLinks" aria-controls="Liquid-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Liquid-Imperial', 'imperial')">Imperial</button>
-                        <button type="button" class="subTabLinks" aria-controls="Liquid-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Liquid-Metric', 'metric')">Metric</button>
-                    </div>
-                    <div id="Liquid-Imperial" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="teaspoon">Teaspoons</label>
-                            <input type="number" id="teaspoon" name="teaspoon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="tablespoon">Tablespoons</label>
-                            <input type="number" id="tablespoon" name="tablespoon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="liquidOunce">Ounces</label>
-                            <input type="number" id="liquidOunce" name="liquidOunce" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="cup">Cups</label>
-                            <input type="number" id="cup" name="cup" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="pint">Pints</label>
-                            <input type="number" id="pint" name="pint" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="quart">Quarts</label>
-                            <input type="number" id="quart" name="quart" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="gallon">Gallons</label>
-                            <input type="number" id="gallon" name="gallon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                    <div id="Liquid-Metric" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="milliliter">Milliliters</label>
-                            <input type="number" id="milliliter" name="milliliter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="liquidLiter">Liters</label>
-                            <input type="number" id="liquidLiter" name="liquidLiter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="kiloliter">Kiloliters</label>
-                            <input type="number" id="kiloliter" name="kiloliter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <div id="Dry" class="rootTabContent">
-                    <h3>Volume (Dry)</h3>
-                    <div class="tab">
-                        <button type="button" class="subTabLinks" aria-controls="Dry-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Dry-Imperial', 'imperial')">Imperial</button>
-                        <button type="button" class="subTabLinks" aria-controls="Dry-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Dry-Metric', 'metric')">Metric</button>
-                    </div>
-                    <div id="Dry-Imperial" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="teaspoon">Teaspoons</label>
-                            <input type="number" id="teaspoon" name="teaspoon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="tablespoon">Tablespoons</label>
-                            <input type="number" id="tablespoon" name="tablespoon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="dryOunce">Ounces</label>
-                            <input type="number" id="dryOunce" name="dryOunce" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="cup">Cups</label>
-                            <input type="number" id="cup" name="cup" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="pint">Pints</label>
-                            <input type="number" id="pint" name="pint" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="quart">Quarts</label>
-                            <input type="number" id="quart" name="quart" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="gallon">Gallons</label>
-                            <input type="number" id="gallon" name="gallon" inputmode="decimal" step="any" autocomplete="off">
-                        </div>                
-                    </div>
-                    <div id="Dry-Metric" class="subTabContent">
-                        <div class="unitEntry">
-                            <label for="dryLiter">Liters</label>
-                            <input type="number" id="dryLiter" name="dryLiter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="cubicmeter">Cubic Meters</label>
-                            <input type="number" id="cubicmeter" name="cubicmeter" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <div id="Time" class="rootTabContent">
-                    <h3>Time/Age</h3>
-                    <div class="unitEntry">
-                        <label for="millisecond">Milliseconds</label>
-                        <input type="number" id="millisecond" name="millisecond" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="second">Seconds</label>
-                        <input type="number" id="second" name="second" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="minute">Minutes</label>
-                        <input type="number" id="minute" name="minute" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="hour">Hours</label>
-                        <input type="number" id="hour" name="hour" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="day">Days</label>
-                        <input type="number" id="day" name="day" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="week">Weeks</label>
-                        <input type="number" id="week" name="week" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="month">Months</label>
-                        <input type="number" id="month" name="month" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="year">Years</label>
-                        <input type="number" id="year" name="year" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                    <div class="unitEntry">
-                        <label for="decade">Decades</label>
-                        <input type="number" id="decade" name="decade" inputmode="decimal" step="any" autocomplete="off">
-                    </div>
-                </div>
-                <div id="Temperature" class="rootTabContent">
-                    <h3>Temperature</h3>
-                    <div class="tab">
-                        <button type="button" class="subTabLinks" aria-controls="Temperature-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Temperature-Imperial', 'imperial')">Imperial</button>
-                        <button type="button" class="subTabLinks" aria-controls="Temperature-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Temperature-Metric', 'metric')">Metric</button>
-                    </div>
-                    <div id="Temperature-Imperial" class="subTabContent">
-                        <div class="unitEntry" class="tabContent">
-                            <label for="fahrenheit">Fahrenheit</label>
-                            <input type="number" id="fahrenheit" name="fahrenheit" inputmode="decimal" step="any" autocomplete="off">
-                        </div>                
-                    </div>
-                    <div id="Temperature-Metric" class="subTabContent">
-                        <div class="unitEntry" class="tabContent">
-                            <label for="kelvin">Kelvin</label>
-                            <input type="number" id="kelvin" name="kelvin" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                        <div class="unitEntry">
-                            <label for="celsius">Celsius</label>
-                            <input type="number" id="celsius" name="celsius" inputmode="decimal" step="any" autocomplete="off">
-                        </div>
-                    </div>
-                </div>
-                <button id="calculateButton">Calculate</button>
-
-                <div id ="loadingIndicator" role="status" aria-live="polite" hidden>
+        <div class="frame1">
+            <!-- Page loading stuffs -->
+            <div id="pageLoadingOverlay" role="status" aria-live="polite" aria-label="Loading Universal Measurement webtool...">
+                <div class="pageLoadingContent">
                     <div class="loadingSpinner" aria-hidden="true"></div>
-                    <span>Calculating universal measurement conversion...</span>
-                </div>
-                <div id="calculationStatus" class="visuallyHidden" role="status" aria-live="polite"aria-atomic="true"></div>
-                <section id="results" aria-label="Measurement conversion and comparison results"></section>
-            </div>
-            <button id="infoButton" class="infoButton" type="button" aria-label="Information about this tool">?</button>
-            <button id="darkModeButton" class="darkModeButton" type="button" aria-label="Toggle dark mode">🌙</button>
-
-            <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
-                <div class="modal-content">
-                    <button
-                        type="button"
-                        class="close"
-                        aria-label="Close information dialog">
-                        &times;
-                    </button>
-                    <h2 id="infoModalTitle">Info</h2>
-                    <h3>Premise</h3>
-                    <p>
-                        Have you ever been confused by people's ability to <b>eyeball how far away something is</b>? 
-                        Have you ever been unable to <b>convey the physical weight of something</b> in a metric that the person you're talking to can understand? 
-                        Have you ever just wished for a <b>fun (and potentially obnoxious) way to say how old you are</b>? <br>
-
-                        Regardless of your answers, now you can do that, with the <b><em>Universal Measurement Webtool</em></b>! 
-                    </p>
-                    <h3>How Do</h3>
-                    <ol>
-                        <li>Select <b>type of measurement</b></li>
-                        <li>Select <b>system of units</b>, if applicable</li>
-                        <li>Fill out 1 or more of the unit fields</li>
-                        <li><b>Hit Calculate</b> (or <b>press Enter</b> on your keyboard)</li>
-                    </ol>
-                    <h3>Why</h3>
-                    <p>
-                        Recently, I was introduced to the phrase <i>"3 apples tall"</i>, in reference to the height of a <em>Smurf</em>, and wondered how tall that actually was. 
-                        From there, I got the idea to develop a calculator that you enter lengths/widths/heights into and it would return how many apples that was equal to. 
-                        And then I thought about how to represent the length of something with other objects. 
-                        And then I thought about measuring weight, volume, temperature and time the same way.
-                        A couple rabbit hole dives and spontaneous brainstorms later, this idea for a length calculator became a length-mass-volume-time-temperature calculator. 
-                    </p>
-                    <h3>Future Plans</h3>
-                    <p>
-                        I plan on adding <b>more comparison items</b>, as well as <b>new measurement types</b> like <b>electrical voltage</b> and <b>velocity</b>.
-                        If you <b>have a suggestion</b> on how to make this tool better, or <b>have an idea for a comparison item</b>, 
-                        <a href="mailto:tinydevwebsite@gmail.com">send me an email</a>!
-                        If you <b>run into a bug</b>, <b>submit a report</b> to this project's <b>GitHub repo linked at the bottom of the page</b>. 
-                        <u>Any feedback means the world to me!</u>
-                    </p>
+                    <h2>Universal Measurement Webtool</h2>
+                    <p>Loading...</p>
                 </div>
             </div>
+            <div id="page-container">
+                <div id="content-wrap">
+                    <!-- Title -->
+                    <div class="tape-h1">Universal Measurement Webtool</div>
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <button type="button" class="rootTabLinks" aria-controls="Length/Width/Height" aria-pressed="false" onClick="displayOptions(event, 'Length')">Length/Width/Height</button>
+                        <button type="button" class="rootTabLinks" aria-controls="Mass/Weight" aria-pressed="false" onClick="displayOptions(event, 'Mass')">Mass/Weight</button>
+                        <button type="button" class="rootTabLinks" aria-controls="Volume (Liquid)" aria-pressed="false" onClick="displayOptions(event, 'Liquid')">Volume (Liquid)</button>
+                        <button type="button" class="rootTabLinks" aria-controls="Volume (Dry)" aria-pressed="false" onClick="displayOptions(event, 'Dry')">Volume (Dry)</button>
+                        <button type="button" class="rootTabLinks" aria-controls="Time" aria-pressed="false" onClick="displayOptions(event, 'Time')">Time/Age</button>
+                        <button type="button" class="rootTabLinks" aria-controls="Temperature" aria-pressed="false" onClick="displayOptions(event, 'Temperature')">Temperature</button>
+                    </div>
 
-            <footer id="footer">
-                TinyDev 2026 <br> Bug Reports: <a href="https://github.com/tinyfaceGH/universalmeasurement/issues">GitHub Repository</a>
-            </footer>
+                    <!-- Tab content -->
+                    <div id="Length" class="rootTabContent">
+                        <h3>Length/Width/Height</h3>
+                        <div class="tab">
+                            <button type="button" class="subTabLinks" aria-controls="Length-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Length-Imperial', 'imperial')">Imperial</button>
+                            <button type="button" class="subTabLinks" aria-controls="Length-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Length-Metric', 'metric')">Metric</button>
+                        </div>
+                        <div id="Length-Imperial" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="inch">Inches</label>
+                                <input type="number" id="inch" name="inch" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="foot">Feet</label>
+                                <input type="number" id="foot" name="foot" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="yard">Yards</label>
+                                <input type="number" id="yard" name="yard" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="mile">Miles</label>
+                                <input type="number" id="mile" name="mile" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                        <div id="Length-Metric" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="millimeter">Millimeters</label>
+                                <input type="number" id="millimeter" name="millimeter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="centimeter">Centimeters</label>
+                                <input type="number" id="centimeter" name="centimeter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="meter">Meters</label>
+                                <input type="number" id="meter" name="meter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="kilometer">Kilometers</label>
+                                <input type="number" id="kilometer" name="kilometer" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Mass" class="rootTabContent">
+                        <h3>Mass/Weight</h3>
+                        <div class="tab">
+                            <button type="button" class="subTabLinks" aria-controls="Mass-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Mass-Imperial', 'imperial')">Imperial</button>
+                            <button type="button" class="subTabLinks" aria-controls="Mass-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Mass-Metric', 'metric')">Metric</button>
+                        </div>
+                        <div id="Mass-Imperial" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="ounce">Ounces</label>
+                                <input type="number" id="ounce" name="ounce" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="pound">Pounds</label>
+                                <input type="number" id="pound" name="pound" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="ton">Tons</label>
+                                <input type="number" id="ton" name="ton" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                        <div id="Mass-Metric" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="milligram">Milligrams</label>
+                                <input type="number" id="milligram" name="milligram" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="gram">Grams</label>
+                                <input type="number" id="gram" name="gram" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="kilogram">Kilograms</label>
+                                <input type="number" id="kilogram" name="kilogram" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Liquid" class="rootTabContent">
+                        <h3>Volume (Liquid)</h3>
+                        <div class="tab">
+                            <button type="button" class="subTabLinks" aria-controls="Liquid-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Liquid-Imperial', 'imperial')">Imperial</button>
+                            <button type="button" class="subTabLinks" aria-controls="Liquid-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Liquid-Metric', 'metric')">Metric</button>
+                        </div>
+                        <div id="Liquid-Imperial" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="teaspoon">Teaspoons</label>
+                                <input type="number" id="teaspoon" name="teaspoon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="tablespoon">Tablespoons</label>
+                                <input type="number" id="tablespoon" name="tablespoon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="liquidOunce">Ounces</label>
+                                <input type="number" id="liquidOunce" name="liquidOunce" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="cup">Cups</label>
+                                <input type="number" id="cup" name="cup" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="pint">Pints</label>
+                                <input type="number" id="pint" name="pint" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="quart">Quarts</label>
+                                <input type="number" id="quart" name="quart" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="gallon">Gallons</label>
+                                <input type="number" id="gallon" name="gallon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                        <div id="Liquid-Metric" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="milliliter">Milliliters</label>
+                                <input type="number" id="milliliter" name="milliliter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="liquidLiter">Liters</label>
+                                <input type="number" id="liquidLiter" name="liquidLiter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="kiloliter">Kiloliters</label>
+                                <input type="number" id="kiloliter" name="kiloliter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Dry" class="rootTabContent">
+                        <h3>Volume (Dry)</h3>
+                        <div class="tab">
+                            <button type="button" class="subTabLinks" aria-controls="Dry-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Dry-Imperial', 'imperial')">Imperial</button>
+                            <button type="button" class="subTabLinks" aria-controls="Dry-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Dry-Metric', 'metric')">Metric</button>
+                        </div>
+                        <div id="Dry-Imperial" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="dryTeaspoon">Teaspoons</label>
+                                <input type="number" id="dryTeaspoon" name="dryTeaspoon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryTablespoon">Tablespoons</label>
+                                <input type="number" id="dryTablespoon" name="dryTablespoon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryOunce">Ounces</label>
+                                <input type="number" id="dryOunce" name="dryOunce" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryCup">Cups</label>
+                                <input type="number" id="dryCup" name="dryCup" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryPint">Pints</label>
+                                <input type="number" id="dryPint" name="dryPint" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryQuart">Quarts</label>
+                                <input type="number" id="dryQuart" name="dryQuart" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="dryGallon">Gallons</label>
+                                <input type="number" id="dryGallon" name="dryGallon" inputmode="decimal" step="any" autocomplete="off">
+                            </div>                
+                        </div>
+                        <div id="Dry-Metric" class="subTabContent">
+                            <div class="unitEntry">
+                                <label for="dryLiter">Liters</label>
+                                <input type="number" id="dryLiter" name="dryLiter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="cubicmeter">Cubic Meters</label>
+                                <input type="number" id="cubicmeter" name="cubicmeter" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Time" class="rootTabContent">
+                        <h3>Time/Age</h3>
+                        <div class="unitEntry">
+                            <label for="millisecond">Milliseconds</label>
+                            <input type="number" id="millisecond" name="millisecond" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="second">Seconds</label>
+                            <input type="number" id="second" name="second" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="minute">Minutes</label>
+                            <input type="number" id="minute" name="minute" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="hour">Hours</label>
+                            <input type="number" id="hour" name="hour" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="day">Days</label>
+                            <input type="number" id="day" name="day" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="week">Weeks</label>
+                            <input type="number" id="week" name="week" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="month">Months</label>
+                            <input type="number" id="month" name="month" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="year">Years</label>
+                            <input type="number" id="year" name="year" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                        <div class="unitEntry">
+                            <label for="decade">Decades</label>
+                            <input type="number" id="decade" name="decade" inputmode="decimal" step="any" autocomplete="off">
+                        </div>
+                    </div>
+                    <div id="Temperature" class="rootTabContent">
+                        <h3>Temperature</h3>
+                        <div class="tab">
+                            <button type="button" class="subTabLinks" aria-controls="Temperature-Imperial" aria-pressed="false" onClick="displaySubOptions(event, 'Temperature-Imperial', 'imperial')">Imperial</button>
+                            <button type="button" class="subTabLinks" aria-controls="Temperature-Metric" aria-pressed="false" onClick="displaySubOptions(event, 'Temperature-Metric', 'metric')">Metric</button>
+                        </div>
+                        <div id="Temperature-Imperial" class="subTabContent">
+                            <div class="unitEntry" class="tabContent">
+                                <label for="fahrenheit">Fahrenheit</label>
+                                <input type="number" id="fahrenheit" name="fahrenheit" inputmode="decimal" step="any" autocomplete="off">
+                            </div>                
+                        </div>
+                        <div id="Temperature-Metric" class="subTabContent">
+                            <div class="unitEntry" class="tabContent">
+                                <label for="kelvin">Kelvin</label>
+                                <input type="number" id="kelvin" name="kelvin" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                            <div class="unitEntry">
+                                <label for="celsius">Celsius</label>
+                                <input type="number" id="celsius" name="celsius" inputmode="decimal" step="any" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="calculateButton">Calculate</button>
+
+                    <div id ="loadingIndicator" role="status" aria-live="polite" hidden>
+                        <div class="loadingSpinner" aria-hidden="true"></div>
+                        <span>Calculating universal measurement conversion...</span>
+                    </div>
+                    <div id="calculationStatus" class="visuallyHidden" role="status" aria-live="polite"aria-atomic="true"></div>
+                    <section id="results" aria-label="Measurement conversion and comparison results"></section>
+                </div>
+                <button id="infoButton" class="infoButton" type="button" aria-label="Information about this tool">?</button>
+                <button id="darkModeButton" class="darkModeButton" type="button" aria-label="Toggle dark mode">🌙</button>
+
+                <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="infoModalTitle">
+                    <div class="modal-content">
+                        <button
+                            type="button"
+                            class="close"
+                            aria-label="Close information dialog">
+                            &times;
+                        </button>
+                        <h2 id="infoModalTitle">Info</h2>
+                        <h3>Premise</h3>
+                        <p>
+                            Have you ever been confused by people's ability to <b>eyeball how far away something is</b>? 
+                            Have you ever been unable to <b>convey the physical weight of something</b> in a metric that the person you're talking to can understand? 
+                            Have you ever just wished for a <b>fun (and potentially obnoxious) way to say how old you are</b>? <br>
+
+                            Regardless of your answers, now you can do that, with the <b><em>Universal Measurement Webtool</em></b>! 
+                        </p>
+                        <h3>How Do</h3>
+                        <ol>
+                            <li>Select <b>type of measurement</b></li>
+                            <li>Select <b>system of units</b>, if applicable</li>
+                            <li>Fill out 1 or more of the unit fields</li>
+                            <li><b>Hit Calculate</b> (or <b>press Enter</b> on your keyboard)</li>
+                        </ol>
+                        <h3>Why</h3>
+                        <p>
+                            Recently, I was introduced to the phrase <i>"3 apples tall"</i>, in reference to the height of a <em>Smurf</em>, and wondered how tall that actually was. 
+                            From there, I got the idea to develop a calculator that you enter lengths/widths/heights into and it would return how many apples that was equal to. 
+                            And then I thought about how to represent the length of something with other objects. 
+                            And then I thought about measuring weight, volume, temperature and time the same way.
+                            A couple rabbit hole dives and spontaneous brainstorms later, this idea for a length calculator became a length-mass-volume-time-temperature calculator. 
+                        </p>
+                        <h3>Future Plans</h3>
+                        <p>
+                            I plan on adding <b>more comparison items</b>, as well as <b>new measurement types</b> like <b>electrical voltage</b> and <b>velocity</b>.
+                            If you <b>have a suggestion</b> on how to make this tool better, or <b>have an idea for a comparison item</b>, 
+                            <a href="mailto:tinydevwebsite@gmail.com">send me an email</a>!
+                            If you <b>run into a bug</b>, <b>submit a report</b> to this project's <b>GitHub repo linked at the bottom of the page</b>. 
+                            <u>Any feedback means the world to me!</u>
+                        </p>
+                    </div>
+                </div>
+
+                <footer id="footer">
+                    TinyDev 2026 <br> Bug Reports: <a href="https://github.com/tinyfaceGH/universalmeasurement/issues">GitHub Repository</a>
+                </footer>
+            </div>
+            <script src="/scripts/universal-measurement.js"></script>
         </div>
-        <script src="/scripts/universal-measurement.js"></script>
     </body>
 </html>
