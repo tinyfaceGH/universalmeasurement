@@ -5,140 +5,160 @@
             "units": "teaspoon",
             "volume": 0.004,
             "useIf": 1,
-            "sentencePortion": "The volume of _ grains of uncooked rice."
+            "sentencePortion": "The volume of _ grains of uncooked rice.",
+            "image": "/static/images/rice.png"
         },
         {
             "item": "Green Pea",
             "units": "teaspoon",
             "volume": 0.03,
             "useIf": 1,
-            "sentencePortion": "The volume of _ green peas."
+            "sentencePortion": "The volume of _ green peas.",
+            "image": "/static/images/green pea.jpg"
         },
         {
             "item": "Small Marble",
             "units": "teaspoon",
             "volume": 0.42,
             "useIf": 1,
-            "sentencePortion": "The volume of _ small marbles."
+            "sentencePortion": "The volume of _ small marbles.",
+            "image": "/static/images/marble.png"
         },
         {
             "item": "Six-Sided Die",
             "units": "teaspoon",
             "volume": 0.83,
             "useIf": 1,
-            "sentencePortion": "The volume of _ standard six-sided dice."
+            "sentencePortion": "The volume of _ standard six-sided dice.",
+            "image": "/static/images/six sided die.png"
         },
         {
             "item": "AA Battery",
             "units": "liter",
             "volume": 0.0083,
             "useIf": 1,
-            "sentencePortion": "The volume of _ AA batteries."
+            "sentencePortion": "The volume of _ AA batteries.",
+            "image": "/static/images/aa battery.jpg"
         },
         {
             "item": "Ping-Pong Ball",
             "units": "liter",
             "volume": 0.0335,
             "useIf": 1,
-            "sentencePortion": "The volume of _ ping-pong balls."
+            "sentencePortion": "The volume of _ ping-pong balls.",
+            "image": "/static/images/ping pong ball.png"
         },
         {
             "item": "Golf Ball",
             "units": "liter",
             "volume": 0.0407,
             "useIf": 1,
-            "sentencePortion": "The volume of _ golf balls."
+            "sentencePortion": "The volume of _ golf balls.",
+            "image": "/static/images/golf ball.png"
         },
         {
             "item": "Chicken Egg",
             "units": "liter",
             "volume": 0.06,
             "useIf": 1,
-            "sentencePortion": "The volume of _ large chicken eggs."
+            "sentencePortion": "The volume of _ large chicken eggs.",
+            "image": "/static/images/chicken egg.png"
         },
         {
             "item": "Tennis Ball",
             "units": "liter",
             "volume": 0.157,
             "useIf": 1,
-            "sentencePortion": "The volume of _ tennis balls."
+            "sentencePortion": "The volume of _ tennis balls.",
+            "image": "/static/images/tennis ball.jpg"
         },
         {
             "item": "Baseball",
             "units": "liter",
             "volume": 0.21,
             "useIf": 1,
-            "sentencePortion": "The volume of _ baseballs."
+            "sentencePortion": "The volume of _ baseballs.",
+            "image": "/static/images/baseball.jpg"
         },
         {
             "item": "Apple",
             "units": "liter",
             "volume": 0.25,
             "useIf": 1,
-            "sentencePortion": "The volume of _ apples."
+            "sentencePortion": "The volume of _ apples.",
+            "image": "/static/images/apple.png"
         },
         {
             "item": "Paperback Book",
             "units": "liter",
             "volume": 0.72,
             "useIf": 1,
-            "sentencePortion": "The volume occupied by _ paperback books."
+            "sentencePortion": "The volume occupied by _ paperback books.",
+            "image": "/static/images/paperback.png"
         },
         {
             "item": "Clay Brick",
             "units": "liter",
             "volume": 1.7,
             "useIf": 1,
-            "sentencePortion": "The volume of _ standard clay bricks."
+            "sentencePortion": "The volume of _ standard clay bricks.",
+            "image": "/static/images/brick.png"
         },
         {
             "item": "Bowling Ball",
             "units": "liter",
             "volume": 5.45,
             "useIf": 1,
-            "sentencePortion": "The volume of _ bowling balls."
+            "sentencePortion": "The volume of _ bowling balls.",
+            "image": "/static/images/bowling ball.png"
         },
         {
             "item": "Basketball",
             "units": "liter",
             "volume": 7.2,
             "useIf": 1,
-            "sentencePortion": "The volume of _ basketballs."
+            "sentencePortion": "The volume of _ basketballs.",
+            "image": "/static/images/basketball.png"
         },
         {
             "item": "Shoebox",
             "units": "liter",
             "volume": 10,
             "useIf": 1,
-            "sentencePortion": "The space occupied by _ shoeboxes."
+            "sentencePortion": "The space occupied by _ shoeboxes.",
+            "image": "/static/images/shoebox.png"
         },
         {
             "item": "Medium Moving Box",
             "units": "liter",
             "volume": 60,
             "useIf": 1,
-            "sentencePortion": "The space occupied by _ medium moving boxes."
+            "sentencePortion": "The space occupied by _ medium moving boxes.",
+            "image": "/static/images/medium moving box.png"
         },
         {
             "item": "Washing Machine",
             "units": "cubic meter",
             "volume": 0.3,
             "useIf": 1,
-            "sentencePortion": "The exterior volume of _ washing machines."
+            "sentencePortion": "The exterior volume of _ washing machines.",
+            "image": "/static/images/washing machine.png"
         },
         {
             "item": "Household Refrigerator",
             "units": "cubic meter",
             "volume": 0.8,
             "useIf": 1,
-            "sentencePortion": "The exterior volume of _ household refrigerators."
+            "sentencePortion": "The exterior volume of _ household refrigerators.",
+            "image": "/static/images/refrigerator.jpg"
         },
         {
             "item": "20-Foot Shipping Container",
             "units": "cubic meter",
             "volume": 38.5,
             "useIf": 0.5,
-            "sentencePortion": "The exterior volume of _ 20-foot shipping containers."
+            "sentencePortion": "The exterior volume of _ 20-foot shipping containers.",
+            "image": "/static/images/20 foot shipping container.png"
         }
     ]
 }
