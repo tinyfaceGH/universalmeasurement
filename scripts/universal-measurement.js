@@ -49,11 +49,19 @@ const ounceElem = document.getElementById("ounce");
 const poundElem = document.getElementById("pound");
 const tonElem = document.getElementById("ton");
 
-// Imperial - Volume
+// Imperial - Dry Volume
+const dryTeaspoonElem = document.getElementById("dryTeaspoon");
+const dryTablespoonElem = document.getElementById("dryTablespoon");
+const dryOunceElem = document.getElementById("dryOunce");
+const dryCupElem = document.getElementById("dryCup");
+const dryPintElem = document.getElementById("dryPint");
+const dryQuartElem = document.getElementById("dryQuart");
+const dryGallonElem = document.getElementById("dryGallon");
+
+// Imperial - Liquid Volume
 const teaspoonElem = document.getElementById("teaspoon");
 const tablespoonElem = document.getElementById("tablespoon");
 const liquidOunceElem = document.getElementById("liquidOunce");
-const dryOunceElem = document.getElementById("dryOunce");
 const cupElem = document.getElementById("cup");
 const pintElem = document.getElementById("pint");
 const quartElem = document.getElementById("quart");
@@ -87,7 +95,7 @@ const darkModeButtonElem = document.getElementById("darkModeButton");
 
 // Global variables
 let currentTab = null;
-let currentMeasurementSystem = "metric";
+let currentMeasurementSystem = "imperial";
 let isCalculating = false;
 let previousFocusedElement = null;
 
@@ -1067,11 +1075,11 @@ function getAdditiveResults(unitsList, conversionList, unitOrder, introUnitOrder
     // Build the introductory line
     if (entriesToDisplay.length === 1) {
         resultsString =
-            `<h2>${entriesToDisplay[0]} is roughly:<br></h2>`;
+            `<div class="tape-h2">${entriesToDisplay[0]} is roughly:<br></div>`;
     } else {
         resultsString =
-            `<h2>${entriesToDisplay.join(", ")} ` +
-            `is roughly:<br></h2>`;
+            `<div class="tape-h2">${entriesToDisplay.join(", ")} ` +
+            `is roughly:<br></div>`;
     }
 
     // Display results
@@ -1104,11 +1112,11 @@ function getTemperatureResults(unitsList, conversionList, unitOrder) {
     // If imperial, that likely means it'll just be fahrenheit. So, we'll skip the "is roughly" part since it would just be redundant to state the temp again.
     if (currentMeasurementSystem === "imperial") {
         resultsString =
-            `<h2>${formatNumber(enteredValue)} ${pluralizeUnit(enteredUnit, enteredValue)} <br></h2>`;
+            `<div class="tape-h2">${formatNumber(enteredValue)} ${pluralizeUnit(enteredUnit, enteredValue)} <br></div>`;
     } else {
         resultsString =
-            `<h2>${formatNumber(enteredValue)} ${pluralizeUnit(enteredUnit, enteredValue)} ` +
-            `is roughly:<br></h2>`;
+            `<div class="tape-h2">${formatNumber(enteredValue)} ${pluralizeUnit(enteredUnit, enteredValue)} ` +
+            `is roughly:<br></div>`;
         resultsString += formatConversions(conversionList, unitOrder);
     }
 
@@ -1412,7 +1420,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format imperial conversion results
             resultsString += 
-                `<h2><br>In imperial units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
             resultsString += formatConversions(imperialConversionList, imperialUnits.length);
 
@@ -1463,7 +1471,7 @@ async function universalMeasurementConversion(unitsList) {
             }
             
             resultsString +=
-                `<h2><br>In metric units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
             resultsString += formatConversions(metricConversionList, metricUnits.length);
         }
@@ -1489,20 +1497,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -1565,7 +1583,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format imperial conversion results
             resultsString += 
-                `<h2><br>In imperial units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
             resultsString += formatConversions(imperialConversionList, imperialUnits.mass);
         
@@ -1619,7 +1637,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format metric conversion results
             resultsString +=
-                `<h2><br>In metric units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
             resultsString += formatConversions(metricConversionList, metricUnits.mass);
         }
@@ -1645,20 +1663,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -1721,7 +1749,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format imperial conversion results
             resultsString += 
-                `<h2><br>In imperial units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
             resultsString += formatConversions(imperialConversionList, imperialUnits.dryVolume);
 
@@ -1776,7 +1804,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format metric conversion results
             resultsString +=
-                `<h2><br>In metric units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
             resultsString += formatConversions(metricConversionList, metricUnits.dryVolume);
 
@@ -1803,20 +1831,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -1878,7 +1916,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format imperial conversion results
             resultsString += 
-                `<h2><br>In imperial units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
             resultsString += formatConversions(imperialConversionList, imperialUnits.liquidVolume);        
 
@@ -1933,7 +1971,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format metric conversion results
             resultsString +=
-                `<h2><br>In metric units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
             resultsString += formatConversions(metricConversionList, metricUnits.liquidVolume);
 
@@ -1960,20 +1998,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -2037,20 +2085,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -2106,7 +2164,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format imperial conversion results
             resultsString += 
-                `<h2><br>In imperial units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
             resultsString += formatConversions(imperialConversionList, imperialUnits.temperature);       
 
@@ -2152,7 +2210,7 @@ async function universalMeasurementConversion(unitsList) {
 
             // Format metric conversion results
             resultsString +=
-                `<h2><br>In metric units, that's roughly:<br></h2>`;
+                `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
             resultsString += formatConversions(metricConversionList, metricUnits.temperature);
 
@@ -2179,20 +2237,30 @@ async function universalMeasurementConversion(unitsList) {
         let comparisonResults = "";
 
         if (measurementComparisons.length > 0) {
-            comparisonResults += `<h2><br>For reference, that's roughly:<br></h2>`;
+            comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const imageHTML = entry.image
+                    ? `<img
+                        src="${entry.image}"
+                        alt="${entry.item}"
+                        class="comparisonImage"
+                        loading="lazy"
+                    >`
+                    : "";
+
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
+                        ${imageHTML}
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
             }
         } else {
             comparisonResults +=
-                `<h2><br>For reference:<br></h2>` +
+                `<div class="tape-h2">For reference:<br></div>` +
                 `<h3>No applicable comparisons were found. More items for comparison will be added in the future. Check back later, or enter a new measurement!</h3>`;
         }
 
@@ -2241,7 +2309,8 @@ function measurementComparison(unitsSI, unit, jsonData, type) {
             const comparisonObject = {
                 item: item.item,
                 quotient: comparisonQuotient,
-                sentence: formattedSentence
+                sentence: formattedSentence,
+                image: item.image || null
             };
 
             comparisons.push(comparisonObject);
@@ -2507,13 +2576,13 @@ function createMeasurementList() {
             };
         } else if (currentTab === "Dry") {
             measurementList = {
-                teaspoon: teaspoonElem.value,
-                tablespoon: tablespoonElem.value,
+                teaspoon: dryTeaspoonElem.value,
+                tablespoon: dryTablespoonElem.value,
                 ounce: dryOunceElem.value,
-                cup: cupElem.value,
-                pint: pintElem.value,
-                quart: quartElem.value,
-                gallon: gallonElem.value
+                cup: dryCupElem.value,
+                pint: dryPintElem.value,
+                quart: dryQuartElem.value,
+                gallon: dryGallonElem.value
             };
         } else if (currentTab === "Liquid") {
             measurementList = {
@@ -2647,5 +2716,14 @@ document.addEventListener("keydown", (event) => {
 });
 
 darkModeButtonElem.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
+    const isDarkMode = document.body.classList.toggle('dark-mode');
+
+    // Change da icon
+    darkModeButtonElem.textContent = isDarkMode ? "☀️" : "🌙";
+
+    // Update the button's aria label
+    darkModeButtonElem.setAttribute(
+        "aria-label",
+        isDarkMode ? "Switch to light mode" : "Switch to dark mode"
+    );
 });
