@@ -3,149 +3,191 @@
         {
             "item": "Drop of Water",
             "units": "milliliter",
+            "type": "in volume, roughly",
             "volume": 0.05,
             "useIf": 1,
-            "sentencePortion": "The volume of _ drops of water."
+            "sentencePortion": "The volume of _ drops of water.",
+            "image": "/static/images/water drop.png"
         },
         {
             "item": "Teaspoon of Cough Syrup",
             "units": "teaspoon",
+            "type": "in volume",
             "volume": 1,
             "useIf": 1,
-            "sentencePortion": "The volume of _ teaspoons of cough syrup."
+            "sentencePortion": "The volume of _ teaspoons of cough syrup.",
+            "image": "/static/images/teaspoon of cough syrup.jpg"
         },
         {
             "item": "Travel-Size Perfume Vial",
             "units": "milliliter",
+            "type": "in volume",
             "volume": 10,
             "useIf": 1,
-            "sentencePortion": "The volume of _ travel-size perfume vials."
+            "sentencePortion": "The volume of _ travel-size perfume vials.",
+            "image": "/static/images/travel sized perfume.png"
         },
         {
             "item": "Tablespoon of Olive Oil",
             "units": "tablespoon",
+            "type": "in volume",
             "volume": 1,
             "useIf": 1,
-            "sentencePortion": "The volume of _ tablespoons of olive oil."
+            "sentencePortion": "The volume of _ tablespoons of olive oil.",
+            "image": "/static/images/tablespoon of olive oil.png"
         },
         {
             "item": "Single Shot of Espresso",
             "units": "milliliter",
+            "type": "in volume, roughly",
             "volume": 30,
             "useIf": 1,
-            "sentencePortion": "The volume of _ single espresso shots."
+            "sentencePortion": "The volume of _ single espresso shots.",
+            "image": "/static/images/single shot of expresso.png"
         },
         {
             "item": "Small Yogurt Drink",
             "units": "milliliter",
+            "type": "in volume",
             "volume": 100,
             "useIf": 1,
-            "sentencePortion": "The volume of _ small yogurt drinks."
+            "sentencePortion": "The volume of _ small yogurt drinks.",
+            "image": "/static/images/small yogurt drink.png"
         },
         {
             "item": "Juice Box",
             "units": "milliliter",
+            "type": "in volume",
             "volume": 200,
             "useIf": 1,
-            "sentencePortion": "The volume of _ juice boxes."
+            "sentencePortion": "The volume of _ juice boxes.",
+            "image": "/static/images/juice box.png"
         },
         {
             "item": "Glass of Milk",
             "units": "milliliter",
+            "type": "in volume, roughly",
             "volume": 240,
             "useIf": 1,
-            "sentencePortion": "The volume of _ glasses of milk."
+            "sentencePortion": "The volume of _ glasses of milk.",
+            "image": "/static/images/glass of milk.png"
         },
         {
             "item": "Standard Soda Can",
             "units": "ounce",
+            "type": "in volume",
             "volume": 12,
             "useIf": 1,
-            "sentencePortion": "The volume of _ standard soda cans."
+            "sentencePortion": "The volume of _ standard soda cans.",
+            "image": "/static/images/soda can.png"
         },
         {
             "item": "Single-Use Water Bottle",
             "units": "milliliter",
+            "type": "in volume",
             "volume": 500,
             "useIf": 1,
-            "sentencePortion": "The volume of _ single-use water bottles."
+            "sentencePortion": "The volume of _ single-use water bottles.",
+            "image": "/static/images/water bottle.png"
         },
         {
             "item": "Non-Alcoholic Wine Bottle",
             "units": "milliliter",
+            "type": "in volume",
             "volume": 750,
             "useIf": 1,
-            "sentencePortion": "The volume of _ standard non-alcoholic wine bottles."
+            "sentencePortion": "The volume of _ standard non-alcoholic wine bottles.",
+            "image": "/static/images/non alcoholic wine bottle.png"
         },
         {
             "item": "Carton of Orange Juice",
             "units": "liter",
+            "type": "in volume",
             "volume": 1,
             "useIf": 1,
-            "sentencePortion": "The volume of _ one-liter orange juice cartons."
+            "sentencePortion": "The volume of _ one-liter orange juice cartons.",
+            "image": "/static/images/carton of orange juice.png"
         },
         {
             "item": "Large Soda Bottle",
             "units": "liter",
+            "type": "in volume",
             "volume": 2,
             "useIf": 1,
-            "sentencePortion": "The volume of _ two-liter soda bottles."
+            "sentencePortion": "The volume of _ two-liter soda bottles.",
+            "image": "/static/images/2 liter soda bottle.png"
         },
         {
             "item": "Gallon Jug of Pink Lemonade",
             "units": "gallon",
+            "type": "in volume",
             "volume": 1,
             "useIf": 1,
-            "sentencePortion": "The volume of _ gallon jugs of pink lemonade."
+            "sentencePortion": "The volume of _ one-gallon jugs of pink lemonade.",
+            "image": "/static/images/gallon jug of pink lemonade.png"
         },
         {
             "item": "Five-Gallon Water Cooler Bottle",
             "units": "gallon",
+            "type": "in volume",
             "volume": 5,
             "useIf": 1,
-            "sentencePortion": "The volume of _ five-gallon water cooler bottles."
+            "sentencePortion": "The volume of _ five-gallon water cooler bottles.",
+            "image": "/static/images/5 gallon water cooler bottle.png"
         },
         {
             "item": "Filled Bathtub",
             "units": "liter",
+            "type": "in volume, roughly",
             "volume": 150,
             "useIf": 1,
-            "sentencePortion": "The volume of _ filled bathtubs."
+            "sentencePortion": "The volume of _ filled bathtubs.",
+            "image": "/static/images/bathtub.png"
         },
         {
             "item": "Rain Barrel",
             "units": "gallon",
+            "type": "in volume",
             "volume": 55,
             "useIf": 1,
-            "sentencePortion": "The volume of _ full 55-gallon rain barrels."
+            "sentencePortion": "The volume of _ full 55-gallon rain barrels.",
+            "image": "/static/images/rain barrel.jpg"
         },
         {
             "item": "Residential Hot Tub",
             "units": "liter",
+            "type": "in volume, roughly",
             "volume": 1200,
             "useIf": 0.5,
-            "sentencePortion": "The volume of _ filled residential hot tubs."
+            "sentencePortion": "The volume of _ filled residential hot tubs.",
+            "image": "/static/images/hot tub.png"
         },
         {
             "item": "Water Tanker Truck",
             "units": "kiloliter",
+            "type": "in volume, roughly",
             "volume": 20,
             "useIf": 0.5,
-            "sentencePortion": "The volume of _ full water tanker trucks."
+            "sentencePortion": "The volume of _ full water tanker trucks.",
+            "image": "/static/images/water tanker truck.jpg"
         },
         {
             "item": "Olympic-Size Swimming Pool",
             "units": "kiloliter",
+            "type": "in volume",
             "volume": 2500,
             "useIf": 0.5,
-            "sentencePortion": "The volume of _ Olympic-size swimming pools."
+            "sentencePortion": "The volume of _ Olympic-size swimming pools.",
+            "image": "/static/images/olympic-sized swimming pool.jpg"
         },
         {
             "item": "Earth's Ocean",
             "units": "gallon",
+            "type": "in estimated volume",
             "volume": 352670000000000000000,
             "useIf": 0.01,
-            "sentencePortion": "The estimated volume of Earth's ocean."
+            "sentencePortion": "_ times the estimated volume of Earth's ocean.",
+            "image": "/static/images/earths ocean.jpg"
         }
     ]
 }

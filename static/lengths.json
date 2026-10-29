@@ -3,156 +3,199 @@
         {
             "item": "Ant",
             "units": "millimeter",
+            "type": "long",
             "length": 0.75,
             "useIf": 1,
-            "sentencePortion": "The length of _ ants."
+            "sentencePortion": "The length of _ ants.",
+            "image": "/static/images/ant.png"
         },
         {
             "item": "Golf Ball",
             "units": "inch",
+            "type": "in diameter",
             "length": 1.68,
             "useIf": 1,
-            "sentencePortion": "_ times the diameter of a golf ball."
+            "sentencePortion": "_ times the diameter of a golf ball.",
+            "image": "/static/images/golf ball.png"
         },
         {
             "item": "AA Battery",
             "units": "millimeter",
+            "type": "long",
             "length": 50.5,
             "useIf": 1,
-            "sentencePortion": "The length of _ AA batteries."
+            "sentencePortion": "The length of _ AA batteries.",
+            "image": "/static/images/aa battery.jpg"
         },
         {
             "item": "Light Bulb",
             "units": "inch",
+            "type": "in diameter",
             "length": 2.375,
             "useIf": 1,
-            "sentencePortion": "The diameter of _ A19 lightbulbs."
+            "sentencePortion": "The diameter of _ A19 lightbulbs.",
+            "image": "/static/images/lightbulb.png"
         },
         {
             "item": "Apple",
             "units": "inch",
+            "type": "tall",
             "length": 3,
             "useIf": 1,
-            "sentencePortion": "The height of _ apples."
+            "sentencePortion": "The height of _ apples.",
+            "image": "/static/images/apple.png"
         },
         {
             "item": "Orange",
             "units": "inch",
+            "type": "tall",
             "length": 3,
             "useIf": 1,
-            "sentencePortion": "The height of _ oranges."
+            "sentencePortion": "The height of _ oranges.",
+            "image": "/static/images/orange.png"
         },
         {
             "item": "Rubber Duck",
             "units": "inch",
+            "type": "tall",
             "length": 4,
             "useIf": 1,
-            "sentencePortion": "The height of _ rubber ducks."
+            "sentencePortion": "The height of _ rubber ducks.",
+            "image": "/static/images/rubber duck.png"
         },
         {
             "item": "Plastic Fork",
             "units": "inch",
             "length": 6,
             "useIf": 1,
-            "sentencePortion": "The length of _ plastic forks."
+            "sentencePortion": "The length of _ plastic forks.",
+            "image": "/static/images/plastic fork.png"
         },
         {
             "item": "Steam Machine",
             "units": "inch",
+            "type": "tall",
             "length": 6.39,
             "useIf": 1,
-            "sentencePortion": "The height of _ Steam Machines (not affiliated (yet))."
+            "sentencePortion": "The height of _ Steam Machines (not affiliated (yet)).",
+            "image": "/static/images/steam machine.png"
         },
         {
             "item": "Pencil",
             "units": "inch",
+            "type": "long",
             "length": 7.5,
             "useIf": 0.5,
-            "sentencePortion": "The length of _ pencils."
+            "sentencePortion": "The length of _ pencils.",
+            "image": "/static/images/pencil.png"
         },
         {
             "item": "Toothbrush",
             "units": "inch",
+            "type": "long",
             "length": 8,
             "useIf": 1,
-            "sentencePortion": "The length of _ toothbrushes."
+            "sentencePortion": "The length of _ toothbrushes.",
+            "image": "/static/images/toothbrush.png"
         },
         {
             "item": "Kirby",
             "units": "inch",
+            "type": "tall",
             "length": 8,
             "useIf": 1,
-            "sentencePortion": "The height of _ Kirbys."
+            "sentencePortion": "The height of _ Kirbys.",
+            "image": "/static/images/kirby.png"
         },
         {
             "item": "American Ruler",
             "units": "inch",
+            "type": "long",
             "length": 12,
             "useIf": 0.5,
-            "sentencePortion": "The length of _ American rulers."
+            "sentencePortion": "The length of _ American rulers.",
+            "image": "/static/images/ruler.png"
         },
         {
             "item": "Medium-Sized Wooden Rolling Pin",
             "units": "centimeter",
+            "type": "long",
             "length": 38,
             "useIf": 1,
-            "sentencePortion": "The length of _ rolling pins."
+            "sentencePortion": "The length of _ rolling pins.",
+            "image": "/static/images/rolling pin.png"
         },
         {
             "item": "Rain Umbrella",
             "units": "inch",
+            "type": "long",
             "length": 36,
             "useIf": 1,
-            "sentencePortion": "The length of _ standard rain umbrellas."
+            "sentencePortion": "The length of _ standard rain umbrellas.",
+            "image": "/static/images/umbrella.png"
         },
         {
             "item": "Bass Guitar",
             "units": "foot",
+            "type": "long",
             "length": 4,
             "useIf": 1,
-            "sentencePortion": "The length of _ bass guitars."
+            "sentencePortion": "The length of _ bass guitars.",
+            "image": "/static/images/bass guitar.jpg"
         },
         {
             "item": "Shedletsky (Robloxian)",
             "units": "meter",
+            "type": "tall",
             "length": 1.5,
             "useIf": 1,
-            "sentencePortion": "The height of _ Shedletskies."
+            "sentencePortion": "The height of _ Shedletskies.",
+            "image": "/static/images/shedletsky.png"
         },
         {
             "item": "Adult Human",
             "units": "meter",
+            "type": "tall",
             "length": 1.7,
             "useIf": 1,
-            "sentencePortion": "The height of _ average adults."
+            "sentencePortion": "The height of _ average adults.",
+            "image": "/static/images/adult man.png"
         },
         {
             "item": "U.S. School Bus",
             "units": "foot",
+            "type": "long",
             "length": 45,
             "useIf": 1,
-            "sentencePortion": "The length of _ full-sized U.S. school buses."
+            "sentencePortion": "The length of _ full-sized U.S. school buses.",
+            "image": "/static/images/school bus.png"
         },
         {
             "item": "Olympic-Size Swimming Pool",
             "units": "meter",
+            "type": "long",
             "length": 50,
             "useIf": 0.5,
-            "sentencePortion": "The length of _ Olympic-size swimming pools."
+            "sentencePortion": "The length of _ Olympic-size swimming pools.",
+            "image": "/static/images/olympic-sized swimming pool.jpg"
         },
         {
             "item": "Earth",
             "units": "mile",
+            "type": "in diameter",
             "length": 7926.38,
             "useIf": 0.5,
-            "sentencePortion": "_ times the diameter of Earth."
+            "sentencePortion": "_ times the diameter of Earth.",
+            "image": "/static/images/earth.jpg"
         },
         {
             "item": "Earth's Sun",
             "units": "mile",
+            "type": "in diameter",
             "length": 864600,
             "useIf": 0.5,
-            "sentencePortion": "_ times the diameter of Earth's Sun."
+            "sentencePortion": "_ times the diameter of Earth's Sun.",
+            "image": "/static/images/sun.png"
         }
     ]
 }

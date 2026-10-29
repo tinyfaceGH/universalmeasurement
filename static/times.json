@@ -5,140 +5,160 @@
             "units": "minute",
             "time": 8.3,
             "useIf": 1,
-            "sentencePortion": "_ times the time sunlight takes to reach Earth from the Sun."
+            "sentencePortion": "_ times the time sunlight takes to reach Earth from the Sun.",
+            "image": "/static/images/sunlight traveling from the sun to earth.png"
         },
         {
             "item": "Regulation Soccer Match",
             "units": "minute",
             "time": 90,
             "useIf": 1,
-            "sentencePortion": "_ times the length of a regulation soccer match, excluding stoppage and extra time."
+            "sentencePortion": "_ times the length of a regulation soccer match, excluding stoppage and extra time.",
+            "image": "/static/images/soccer match.jpg"
         },
         {
             "item": "Lifespan Of A Mayfly",
             "units": "day",
             "time": 1,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a mayfly."
+            "sentencePortion": "_ times as long as the average lifespan of a mayfly.",
+            "image": "/static/images/mayfly.jpg"
         },
         {
             "item": "One Solar Day",
             "units": "hour",
             "time": 24,
             "useIf": 1,
-            "sentencePortion": "_ times the length of one solar day."
+            "sentencePortion": "_ times the length of one solar day.",
+            "image": "/static/images/solar day.png"
         },
         {
             "item": "Lifespan Of A Housefly",
             "units": "day",
             "time": 30,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of an adult housefly."
+            "sentencePortion": "_ times as long as the average lifespan of an adult housefly.",
+            "image": "/static/images/housefly.png"
         },
         {
             "item": "Lifespan Of A House Mouse",
             "units": "year",
             "time": 3,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a common house mouse."
+            "sentencePortion": "_ times as long as the average lifespan of a common house mouse.",
+            "image": "/static/images/house mouse.png"
         },
         {
             "item": "Lifespan Of A Domestic Dog",
             "units": "year",
             "time": 13,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a domestic dog."
+            "sentencePortion": "_ times as long as the average lifespan of a domestic dog.",
+            "image": "/static/images/dog.png"
         },
         {
             "item": "Lifespan Of A Domestic Cat",
             "units": "year",
             "time": 16,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a domestic cat."
+            "sentencePortion": "_ times as long as the average lifespan of a domestic cat.",
+            "image": "/static/images/cat.png"
         },
         {
             "item": "Lifespan Of A Horse",
             "units": "year",
             "time": 28,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a horse."
+            "sentencePortion": "_ times as long as the average lifespan of a horse.",
+            "image": "/static/images/horse.png"
         },
         {
             "item": "Lifespan Of A Naked Mole Rat",
             "units": "year",
             "time": 37,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a naked mole rat."
+            "sentencePortion": "_ times as long as the average lifespan of a naked mole rat.",
+            "image": "/static/images/naked mole rat.png"
         },
         {
             "item": "Lifespan Of A Macaw",
             "units": "year",
             "time": 60,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a macaw."
+            "sentencePortion": "_ times as long as the average lifespan of a macaw.",
+            "image": "/static/images/macaw.png"
         },
         {
             "item": "Lifespan Of An Elephant",
             "units": "year",
             "time": 70,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of an elephant."
+            "sentencePortion": "_ times as long as the average lifespan of an elephant.",
+            "image": "/static/images/elephant.png"
         },
         {
             "item": "Halley's Comet Orbital Period",
             "units": "year",
             "time": 76,
             "useIf": 1,
-            "sentencePortion": "_ times the orbital period of Halley's Comet."
+            "sentencePortion": "_ times the orbital period of Halley's Comet.",
+            "image": "/static/images/halleys comet.png"
         },
         {
             "item": "Lifespan Of A Human",
             "units": "year",
             "time": 80,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a human being."
+            "sentencePortion": "_ times as long as the average lifespan of a human being.",
+            "image": "/static/images/adult man.png"
         },
         {
             "item": "Four Score And Seven Years",
             "units": "year",
             "time": 87,
             "useIf": 1,
-            "sentencePortion": "_ times the length of time since America's founding, at the Gettysburg Address."
+            "sentencePortion": "_ times the length of time since America's founding, at the Gettysburg Address.",
+            "image": "/static/images/gettysburg address.png"
         },
         {
             "item": "Lifespan Of The Galápagos Tortoise",
             "units": "year",
             "time": 175,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of the Galápagos Tortoise."
+            "sentencePortion": "_ times as long as the average lifespan of the Galápagos Tortoise.",
+            "image": "/static/images/galapagos tortoise.png"
         },
         {
             "item": "Lifespan Of The Bowhead Whale",
             "units": "year",
             "time": 200,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of the bowhead whale."
+            "sentencePortion": "_ times as long as the average lifespan of the bowhead whale.",
+            "image": "/static/images/bowhead whale.jpg"
         },
         {
             "item": "Lifespan Of A Rougheye Rockfish",
             "units": "year",
             "time": 205,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of a rougheye rockfish."
+            "sentencePortion": "_ times as long as the average lifespan of a rougheye rockfish.",
+            "image": "/static/images/rougheye rockfish.jpg"
         },
         {
             "item": "Lifespan Of The Greenland Shark",
             "units": "year",
             "time": 392,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of the Greenland shark."
+            "sentencePortion": "_ times as long as the average lifespan of the Greenland shark.",
+            "image": "/static/images/greenland shark.jpg"
         },
         {
             "item": "Lifespan Of An Ocean Quahog Clam",
             "units": "year",
             "time": 507,
             "useIf": 1,
-            "sentencePortion": "_ times as long as the average lifespan of an ocean Quahog clam."
+            "sentencePortion": "_ times as long as the average lifespan of an ocean Quahog clam.",
+            "image": "/static/images/ocean quahog clam.jpg"
         }
     ]
 }
