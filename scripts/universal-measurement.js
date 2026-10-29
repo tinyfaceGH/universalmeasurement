@@ -2627,6 +2627,7 @@ function closeInfoModal() {
 }
 
 // Event listeners
+/*
 kelvinElem.addEventListener("input", () => {
     handleTemperatureFields(kelvinElem, [celsiusElem]);
 });
@@ -2638,6 +2639,7 @@ celsiusElem.addEventListener("input", () => {
 fahrenheitElem.addEventListener("input", () => {
     // Unless I add more imperial temperature units, this will remain blank.
 });
+*/
 
 calculateButtonElem.addEventListener("click", async () => {
     initializeCalculation();
