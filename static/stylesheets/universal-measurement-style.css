@@ -50,17 +50,16 @@ b, em {
     font-weight: bolder;
 }
 
+
 /* ==========================================================================
    TAPE TEXT
    ========================================================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 .tape-h1, .tape-h2, .tape-h3 {
-    font-family: 'Caveat', cursive;
-    color: #000;
-    transform: skew(-2deg);
-    filter: blur(0.3px);
-    letter-spacing: var(--random-spacing, 0.5px);
-    background-color: yellow;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .tape-h1 {
@@ -73,6 +72,117 @@ b, em {
 
 .tape-h3 {
     font-size: 1.17em;
+}
+
+/* ==========================================================================
+   TAPE SEGMENTS AND MASKS
+   ========================================================================== */
+
+.tape-object {
+    --tape-color: #e8cf7a;
+    --tape-height: 90px;
+    --tape-rotation: -2deg;
+    --tape-total-width: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--tape-total-width);
+    height: var(--tape-height);
+    max-width: 100%;
+    margin: 12px auto;
+    transform: rotate(var(--tape-rotation));
+    isolation: isolate;
+}
+
+.tape-segments {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.tape-segment {
+    display: block;
+    flex-shrink: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        135deg,
+        color-mix(in srgb, var(--tape-color), white 25%) 0%,
+        var(--tape-color) 45%,
+        color-mix(in srgb, var(--tape-color), black 20%) 100%
+    );
+    background-repeat: no-repeat;
+    background-size: var(--tape-total-width) 100%;
+    background-position: calc(-1 * var(--tape-offset, 0px)) 0;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+}
+
+
+.tapeMask0 {
+    -webkit-mask-image: url('/static/assets/tape_silouette_raw.png');
+    mask-image: url('/static/assets/tape_silouette_raw.png');
+}
+
+.tapeLeft1 {
+    -webkit-mask-image: url('/static/assets/tape_left_1.png');
+    mask-image: url('/static/assets/tape_left_1.png');    
+}
+
+.tapeLeft2 {
+    -webkit-mask-image: url('/static/assets/tape_left_2.png');
+    mask-image: url('/static/assets/tape_left_2.png');    
+}
+
+.tapeLeft3 {
+    -webkit-mask-image: url('/static/assets/tape_left_3.png');
+    mask-image: url('/static/assets/tape_left_3.png');    
+}
+
+.tapeRight1 {
+    -webkit-mask-image: url('/static/assets/tape_right_1.png');
+    mask-image: url('/static/assets/tape_right_1.png');    
+}
+
+.tapeRight2 {
+    -webkit-mask-image: url('/static/assets/tape_right_2.png');
+    mask-image: url('/static/assets/tape_right_2.png');    
+}
+
+.tapeRight3 {
+    -webkit-mask-image: url('/static/assets/tape_right_3.png');
+    mask-image: url('/static/assets/tape_right_3.png');    
+}
+
+.tapeCenter {
+    -webkit-mask-image: url('/static/assets/tape_center.png');
+    mask-image: url('/static/assets/tape_center.png');
+}
+
+.tape-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    padding: 6px 32px;
+    text-align: center;
+    line-height: 1.25;
+    color: #302717;
+    overflow-wrap: anywhere;
+}
+
+.tape-object.tape-h1, .tape-object.tape-h2, .tape-object.tape-h3 {
+    transform: rotate(var(--tape-rotation));
+    filter: blur(0.3px);;
+    letter-spacing: var(--random-spacing, 0.5px);;
 }
 
 /* ==========================================================================
@@ -590,5 +700,13 @@ a:focus-visible {
         padding: 12px;
         font-size: 0.875rem;
         overflow-wrap: anywhere;
+    }
+    .tape-object {
+        --tape-height: 100px;
+        --tape-rotation: -1deg;
+    }
+    .tape-text {
+        padding: 6px 20px;
+        font-size: 0.85em;
     }
 }
