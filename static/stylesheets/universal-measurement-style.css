@@ -95,6 +95,10 @@ b, em {
     isolation: isolate;
 }
 
+body.dark-mode .tape-object {
+    --tape-color: rgb(40, 40, 141);
+}
+
 .tape-segments {
     position: absolute;
     inset: 0;
@@ -179,6 +183,10 @@ b, em {
     overflow-wrap: anywhere;
 }
 
+body.dark-mode .tape-text {
+    color: #f4f4f4;
+}
+
 .tape-object.tape-h1, .tape-object.tape-h2, .tape-object.tape-h3 {
     transform: rotate(var(--tape-rotation));
     filter: blur(0.3px);;
@@ -214,6 +222,17 @@ b, em {
     font-weight: bold;
     margin-top: 20px;
     padding: 0 12px 10px;
+}
+
+#footer-highlight {
+    display: inline-block;
+    background-color: white;
+    border-color: purple;
+    border: 5px solid purple;
+}
+
+body.dark-mode #footer-highlight {
+    background-color: black;
 }
 
 /* ==========================================================================
