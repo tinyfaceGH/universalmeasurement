@@ -99,6 +99,17 @@ let currentMeasurementSystem = "imperial";
 let isCalculating = false;
 let previousFocusedElement = null;
 
+// Tape piece dimensions
+const tapeConfig = {
+    imageHeight: 518,
+    displayHeight: 90,
+    centerWidth: 24,
+    leftWidths: [225, 153, 273],
+    rightWidths: [295, 334, 171],
+    desktopBuffer: 150,
+    mobileBuffer: 16
+}
+
 // JSON files
 const unitsJSONs = {
     length: "/static/lengths.json",
@@ -1037,6 +1048,12 @@ function getLargeNumberLabel(power) {
 
     return unitPrefixes[units] + tensLabels[tens];
 }
+
+// This function chooses a random integer, on or between the two points
+function randomInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 // This function handles the return of results for the passed units list, that is additive (so basically everything except temperature)
 function getAdditiveResults(unitsList, conversionList, unitOrder, introUnitOrder) {
     let entriesToDisplay = [];
@@ -2470,6 +2487,7 @@ async function initializeCalculation() {
         // Run measurement calculation and wait for completion
         calculationStatus.textContent = "Calculating measurements.";
         await universalMeasurementConversion(enteredMeasurements);
+        initializeTapeHeadings(results);
         console.log("Measurement calculation complete.");
         calculationStatus.textContent = "Calculation complete. Results are available below.";
     } catch (error) {
@@ -2626,6 +2644,178 @@ function closeInfoModal() {
     }
 }
 
+// This function builds a tape segment object of the passed tape segment class, width and offset
+function createTapeSegment(className, width, offset) {
+    const segment = document.createElement("span");
+
+    segment.className = `tape-segment ${className}`;
+    segment.style.width = `${width}px`;
+    
+    // Offset the segment's background gradient to it's position in the full strip
+    segment.style.setProperty("--tape-offset", `${offset}px`);
+
+    return segment;
+}
+
+// This function converts the passed element (usually a tape header) into a tape object
+function createTapeObject(element) {
+    // Prevent dupes
+    if (element.classList.contains("tape-object")) {
+        return;
+    }
+
+    // Grab original text content of element
+    const text = element.textContent.trim();
+
+    // Move original text to tape text
+    const tapeText = document.createElement("span");
+    tapeText.className = "tape-text";
+    tapeText.textContent = text;
+
+    // Initialize the "hollow" tape object
+    const segments = document.createElement("div");
+    segments.className = "tape-segments";
+    segments.setAttribute("aria-hidden", "true");
+    element.replaceChildren(segments, tapeText);
+    element.classList.add("tape-object");
+    const leftIndex = randomInteger(1, 3);
+    element.dataset.tapeLeft = leftIndex;
+    const rightIndex = randomInteger(1, 3);
+    element.dataset.tapeRight = rightIndex;
+
+    const randomRotation = (Math.random() * 4) - 2;
+    element.style.setProperty(
+        "--tape-rotation",
+        `${randomRotation}deg`
+    );
+
+    // Calculate the correct size and generate center segments
+    updateTapeObject(element);
+
+}
+
+// This function converts the width of a tape segment image to the actual display width, still preserving it's aspect ratio
+function getScaledTapeWidth(originalWidth, displayHeight) {
+    return originalWidth * (displayHeight / tapeConfig.imageHeight);
+}
+
+// This function is used to calculate the size of the passed tape object and fills it in with the correct amount of center segments
+function updateTapeObject(element) {
+    const segments = element.querySelector(".tape-segments");
+    const tapeText = element.querySelector(".tape-text");
+    if (!segments || !tapeText) {
+        return;
+    }
+
+    const leftIndex = Number(element.dataset.tapeLeft);
+    const rightIndex = Number(element.dataset.tapeRight);
+
+    // Read tape height from CSS and calculate display widths of end pieces using that height
+    const tapeHeight = parseFloat(getComputedStyle(element).height);
+    const leftWidth = getScaledTapeWidth(tapeConfig.leftWidths[leftIndex - 1], tapeHeight);
+    const rightWidth = getScaledTapeWidth(tapeConfig.rightWidths[rightIndex - 1], tapeHeight);
+
+    // Determine how much space the tape may occupy
+    const isMobile = window.innerWidth <= 600; // This is simply a guestimate. I'll probably tweak this number later
+    const sideBuffer = isMobile
+        ? tapeConfig.mobileBuffer
+        : tapeConfig.desktopBuffer;
+    
+    const viewportWidth = window.innerWidth;
+
+    // Account for both sides of the viewport, making sure to leave room between the tape and the edges
+    const availableWidth = Math.max(120, viewportWidth - (sideBuffer * 2));
+
+    // Respect the width of the parent container
+    const parentWidth = element.parentElement.clientWidth;
+    const maxTapeWidth = Math.min(availableWidth, parentWidth);
+
+    // Measure text using it's CSS font size
+    const canvas = document.createElement("canvas");
+    const context = canvas.getContext("2d");
+    const textStyle = getComputedStyle(tapeText);
+    context.font = textStyle.font;
+    const textWidth = context.measureText(tapeText.textContent).width;
+
+    // Space between the text and end segments
+    const textPadding = isMobile ? 40 : 64;
+
+    // Minimum width for tape object
+    const minimumTapeWidth = leftWidth + rightWidth + tapeConfig.centerWidth;
+
+    // Calculate desired tape width
+    const desiredWidth = Math.max(minimumTapeWidth, textWidth + textPadding);
+
+    // Limit it to the available space
+    const tapeWidth = Math.min(desiredWidth, maxTapeWidth);
+
+    // Space available for center segments
+    const centerSpace = Math.max(0, tapeWidth - leftWidth - rightWidth);
+
+    // Calculate number of center segments
+    const centerCount = Math.max(1, Math.ceil(centerSpace / tapeConfig.centerWidth));
+
+    // Store final width in the tape object
+    element.style.setProperty("--tape-total-width", `${tapeWidth}px`);
+
+    // Clear out old segments
+    segments.replaceChildren();
+
+    // Put the left, middle and right segments together
+    let offset = 0;
+
+    const leftSegment = createTapeSegment(
+        `tapeLeft${leftIndex}`,
+        leftWidth,
+        offset
+    );
+    segments.appendChild(leftSegment);
+    offset += leftWidth;
+
+    for (let i = 0; i < centerCount; i++) {
+        // Allow the last center to fill the exact remaining width
+        const remainingWidth = tapeWidth - rightWidth - offset;
+        const segmentWidth = Math.max(0, Math.min(tapeConfig.centerWidth, remainingWidth));
+        
+        if (segmentWidth <= 0) {
+            break;
+        }
+
+        const centerSegment = createTapeSegment("tapeCenter", segmentWidth, offset);
+        segments.appendChild(centerSegment);
+        offset += segmentWidth;
+    }
+
+    const rightSegment = createTapeSegment(
+        `tapeRight${rightIndex}`,
+        rightWidth,
+        offset
+    );
+    segments.appendChild(rightSegment);
+}
+
+// This function initializes all uninitialized tape headings
+function initializeTapeHeadings(container = document) {
+    const tapeHeadings = container.querySelectorAll(
+        ".tape-h1:not(.tape-object), " +
+        ".tape-h2:not(.tape-object), " +
+        ".tape-h3:not(.tape-object)"
+    );
+
+    for (const heading of tapeHeadings) {
+        createTapeObject(heading);
+    }
+}
+
+// This function refreshes the widths of existing tape headings
+function refreshTapeHeadings() {
+    const tapeObjects = document.querySelectorAll(".tape-object");
+
+    for (const tape of tapeObjects) {
+        updateTapeObject(tape);
+    }
+}
+
 // Event listeners
 /*
 kelvinElem.addEventListener("input", () => {
@@ -2728,4 +2918,21 @@ darkModeButtonElem.addEventListener('click', function() {
         "aria-label",
         isDarkMode ? "Switch to light mode" : "Switch to dark mode"
     );
+});
+
+// Initialize tape headings already present in the HTML
+initializeTapeHeadings();
+
+// Recalculate tape widths when the viewport changes
+let tapeResizeFrame = null;
+
+window.addEventListener("resize", () => {
+    if (tapeResizeFrame !== null) {
+        cancelAnimationFrame(tapeResizeFrame);
+    }
+
+    tapeResizeFrame = requestAnimationFrame(() => {
+        refreshTapeHeadings();
+        tapeResizeFrame = null;
+    });
 });
