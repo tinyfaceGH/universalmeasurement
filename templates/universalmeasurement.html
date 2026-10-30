@@ -96,6 +96,11 @@
                 }
             });
         </script>
+
+        <!-- Googa Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
     </head>
     <!-- Body -->
     <body class="pageLoading">
@@ -112,7 +117,7 @@
             <div id="page-container">
                 <div id="content-wrap">
                     <!-- Title -->
-                    <div class="tape-h1">Universal Measurement Webtool</div>
+                    <h1 class="tape-h1">Universal Measurement Webtool</h1>
                     <!-- Tab links -->
                     <div class="tab">
                         <button type="button" class="rootTabLinks" aria-controls="Length/Width/Height" aria-pressed="false" onClick="displayOptions(event, 'Length')">Length/Width/Height</button>
@@ -372,6 +377,11 @@
                     </div>
                     <div id="calculationStatus" class="visuallyHidden" role="status" aria-live="polite"aria-atomic="true"></div>
                     <section id="results" aria-label="Measurement conversion and comparison results"></section>
+                    <!--
+                    <div class="tape tapeMask0">
+                        <div class="tape-h1">Test</div>
+                    </div>
+                    -->
                 </div>
                 <button id="infoButton" class="infoButton" type="button" aria-label="Information about this tool">?</button>
                 <button id="darkModeButton" class="darkModeButton" type="button" aria-label="Toggle dark mode">🌙</button>
