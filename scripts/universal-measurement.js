@@ -1092,17 +1092,25 @@ function getAdditiveResults(unitsList, conversionList, unitOrder, introUnitOrder
     // Build the introductory line
     if (entriesToDisplay.length === 1) {
         resultsString =
-            `<div class="tape-h2">${entriesToDisplay[0]} is roughly:<br></div>`;
+            `<div class="tape-h2">${entriesToDisplay[0]} is roughly:</div>`;
     } else {
         resultsString =
-            `<div class="tape-h2">${entriesToDisplay.join(", ")} ` +
-            `is roughly:<br></div>`;
+            `<div class="tape-h2">${entriesToDisplay.join(", ")} is roughly:</div>`;
     }
 
-    // Display results
-    resultsString += formatConversions(conversionList, unitOrder);
+    // Build results
+    resultsString += `
+        <div class="receiptWrapper">
+            <div class="clearTape" aria-hidden="true"></div>
+            <div class="receiptPaper">
+                <div class="receiptText">
+                    ${formatConversions(conversionList, unitOrder)}
+                </div>
+            </div>
+        </div>
+        <br>
+    `;
 
-    // results.innerHTML = resultsString;
     return resultsString;
 }
 
@@ -1134,7 +1142,15 @@ function getTemperatureResults(unitsList, conversionList, unitOrder) {
         resultsString =
             `<div class="tape-h2">${formatNumber(enteredValue)} ${pluralizeUnit(enteredUnit, enteredValue)} ` +
             `is roughly:<br></div>`;
-        resultsString += formatConversions(conversionList, unitOrder);
+        resultsString += `
+            <div class="receiptWrapper">
+                <div class="clearTape" aria-hidden="true"></div>
+                <div class="receiptPaper">
+                    <div class="receiptText">
+                        ${formatConversions(conversionList, unitOrder)}
+                    </div>
+                </div>
+            </div>`;
     }
 
     return resultsString;
@@ -1152,6 +1168,7 @@ function handleTemperatureFields(activeElem, otherElems) {
 // This function formats the output of conversion lists
 function formatConversions(conversionList, unitOrder) {
     let resultsString = "";
+    let formattedResults = `<div id="receiptText">`
     for (const unit of unitOrder) {
         const value = conversionList[unit];
 
@@ -1439,7 +1456,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString += 
                 `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
-            resultsString += formatConversions(imperialConversionList, imperialUnits.length);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(imperialConversionList, imperialUnits.length)}
+                        </div>
+                    </div>
+                </div>`;
 
 
         } else if (currentMeasurementSystem === "imperial") {
@@ -1490,8 +1515,16 @@ async function universalMeasurementConversion(unitsList) {
             resultsString +=
                 `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
-            resultsString += formatConversions(metricConversionList, metricUnits.length);
-        }
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(metricConversionList, metricUnits.length)}
+                        </div>
+                    </div>
+                </div>`;
+        }   
 
         // Run measurement comparison calculations
         console.log("Performing length comparison calculations...");
@@ -1602,7 +1635,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString += 
                 `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
-            resultsString += formatConversions(imperialConversionList, imperialUnits.mass);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(imperialConversionList, imperialUnits.mass)}
+                        </div>
+                    </div>
+                </div>`;
         
         } else if (currentMeasurementSystem === "imperial") {
             imperialUnitsList = unitsList;
@@ -1656,7 +1697,16 @@ async function universalMeasurementConversion(unitsList) {
             resultsString +=
                 `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
-            resultsString += formatConversions(metricConversionList, metricUnits.mass);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(metricConversionList, metricUnits.mass)}
+                        </div>
+                    </div>
+                </div>`;
+            
         }
 
         // Run measurement comparison calculations
@@ -1768,7 +1818,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString += 
                 `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
-            resultsString += formatConversions(imperialConversionList, imperialUnits.dryVolume);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(imperialConversionList, imperialUnits.dryVolume)}
+                        </div>
+                    </div>
+                </div>`;
 
         } else if (currentMeasurementSystem === "imperial") {
             imperialUnitsList = unitsList;
@@ -1823,7 +1881,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString +=
                 `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
-            resultsString += formatConversions(metricConversionList, metricUnits.dryVolume);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(metricConversionList, metricUnits.dryVolume)}
+                        </div>
+                    </div>
+                </div>`;
 
         }
 
@@ -1934,8 +2000,17 @@ async function universalMeasurementConversion(unitsList) {
             // Format imperial conversion results
             resultsString += 
                 `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
+             
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(imperialConversionList, imperialUnits.liquidVolume)}
+                        </div>
+                    </div>
+                </div>`;     
             
-            resultsString += formatConversions(imperialConversionList, imperialUnits.liquidVolume);        
 
 
         } else if (currentMeasurementSystem === "imperial") {
@@ -1990,7 +2065,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString +=
                 `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
-            resultsString += formatConversions(metricConversionList, metricUnits.liquidVolume);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(metricConversionList, metricUnits.liquidVolume)}
+                        </div>
+                    </div>
+                </div>`;
 
         }
 
@@ -2183,7 +2266,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString += 
                 `<div class="tape-h2">In imperial units, that's roughly:<br></div>`;
             
-            resultsString += formatConversions(imperialConversionList, imperialUnits.temperature);       
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(imperialConversionList, imperialUnits.temperature)}
+                        </div>
+                    </div>
+                </div>`;
 
         } else if (currentMeasurementSystem === "imperial") {
             imperialUnitsList = unitsList;
@@ -2229,7 +2320,15 @@ async function universalMeasurementConversion(unitsList) {
             resultsString +=
                 `<div class="tape-h2">In metric units, that's roughly:<br></div>`;
 
-            resultsString += formatConversions(metricConversionList, metricUnits.temperature);
+            resultsString += `
+                <div class="receiptWrapper">
+                    <div class="clearTape" aria-hidden="true"></div>
+                    <div class="receiptPaper">
+                        <div class="receiptText">
+                            ${formatConversions(metricConversionList, metricUnits.temperature)}
+                        </div>
+                    </div>
+                </div>`;
 
         }
 
@@ -2341,6 +2440,14 @@ function measurementComparison(unitsSI, unit, jsonData, type) {
 function displayOptions(evt, tabName) {
     var i, tabContent, tabLinks;
 
+    const tabSelect = new Audio('/static/assets/tabClick.wav');
+
+    if (currentTab !== tabName) {
+        tabSelect.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
+    }
+
     // Store the current tab
     currentTab = tabName;
 
@@ -2391,6 +2498,13 @@ function displayOptions(evt, tabName) {
 // This function handles the selection and display of subtab entry fields
 function displaySubOptions(evt, subTabName, measurementSystem) {
     const rootTab = evt.currentTarget.closest(".rootTabContent");
+
+    const tabSelect = new Audio('/static/assets/tabClick.wav');
+    if (!evt.currentTarget.classList.contains("active")) {
+        tabSelect.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
+    }
 
     // Hide subtabs belonging ONLY to the currently open root tab
     const subTabContent = rootTab.getElementsByClassName("subTabContent");
@@ -2832,10 +2946,15 @@ fahrenheitElem.addEventListener("input", () => {
 */
 
 calculateButtonElem.addEventListener("click", async () => {
+    const calculateSound = new Audio('/static/assets/calculate.wav');
+    calculateSound.play().catch(error => {
+        console.log("Playback of sound failed:", error);
+    });
     initializeCalculation();
 });
 
 document.addEventListener("keydown", (event) => {
+    const calculateSound = new Audio('/static/assets/calculate.wav');
     // Only initiate calculation when Enter is pressed inside an enabled measurement input field
     if (
         event.key === "Enter" &&
@@ -2844,12 +2963,19 @@ document.addEventListener("keydown", (event) => {
         !event.repeat &&
         infoModalElem.style.display !== "block"
     ) {
+        calculateSound.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
         event.preventDefault();
         initializeCalculation();
     }
 });
 
 infoButtonElem.addEventListener("click", async () => {
+    const openModalSound = new Audio('/static/assets/modalOpen.wav');
+    openModalSound.play().catch(error => {
+        console.log("Playback of sound failed:", error);
+    });
     previousFocusedElement = document.activeElement;
     infoModalElem.style.display = "block";
     document.body.style.overflow = "hidden";
@@ -2858,20 +2984,34 @@ infoButtonElem.addEventListener("click", async () => {
     closeInfoButtonElem.focus();
 });
 
-closeInfoButtonElem.addEventListener("click", closeInfoModal);
+closeInfoButtonElem.addEventListener("click", (event) => {
+    const closeModalSound = new Audio('/static/assets/modalClose.wav');
+    closeModalSound.play().catch(error => {
+        console.log("Playback of sound failed:", error);
+    });
+    closeInfoModal();
+});
 
 infoModalElem.addEventListener("click", (event) => {
+    const closeModalSound = new Audio('/static/assets/modalClose.wav');
     if (event.target === infoModalElem) {
+        closeModalSound.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
         closeInfoModal();
     }
 });
 
 document.addEventListener("keydown", (event) => {
+    const closeModalSound = new Audio('/static/assets/modalClose.wav');
     if (infoModalElem.style.display !== "block") {
         return;
     }
     if (event.key === "Escape") {
         event.preventDefault();
+        closeModalSound.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
         closeInfoModal();
         return;
     }
@@ -2918,6 +3058,22 @@ darkModeButtonElem.addEventListener('click', function() {
         "aria-label",
         isDarkMode ? "Switch to light mode" : "Switch to dark mode"
     );
+
+    // Play a sound
+    const turnOnSound = new Audio('/static/assets/lightson.wav');
+    const turnOffSound = new Audio('/static/assets/lightsoff.wav');
+
+    if (isDarkMode) {
+        turnOffSound.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
+        console.log("Played lightsoff.wav");
+    } else {
+        turnOnSound.play().catch(error => {
+            console.log("Playback of sound failed:", error);
+        });
+        console.log("Played lightson.wav");
+    }
 });
 
 // Initialize tape headings already present in the HTML
