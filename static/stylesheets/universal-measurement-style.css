@@ -29,6 +29,29 @@ body.dark-mode {
     color: #f4f4f4;
 }
 
+body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    pointer-events: none;
+    z-index: 500;
+    opacity: 0;
+    background: radial-gradient(
+        ellipse at center,
+        transparent 25%,
+        rgba(0, 0, 0, 0.15) 45%,
+        rgba(0, 0, 0, 0.55) 75%,
+        rgba(0, 0, 0, 0.9) 100%
+    );
+    transition: opacity 0.3s ease;
+}
+
+body.dark-mode::after {
+    opacity: 1;
+}
+
 .frame1 {
     position: relative;
     min-height: 100vh;
@@ -42,6 +65,10 @@ body.dark-mode {
     padding: 16px;
 }
 
+body.dark-mode .frame1 {
+    color: #f4f4f4;
+}
+
 p, h1, h2, h3, label, button, li, footer {
     font-family: 'Courier New', Courier, monospace;
 }
@@ -50,12 +77,10 @@ b, em {
     font-weight: bolder;
 }
 
-
 /* ==========================================================================
    TAPE TEXT
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 .tape-h1, .tape-h2, .tape-h3 {
     font-family: "Permanent Marker", cursive;
     font-weight: 400;
@@ -191,6 +216,47 @@ body.dark-mode .tape-text {
     transform: rotate(var(--tape-rotation));
     filter: blur(0.3px);;
     letter-spacing: var(--random-spacing, 0.5px);;
+}
+
+.clearTape {
+    --tear-size: 5px;
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 50;
+    transform: translate(-50%, -50%);
+    border-left: 40px solid white;
+    border-right: 40px solid white;
+    border-bottom: 40px solid white;
+    border-top: 35px solid white;
+    opacity: 0.5;
+    -webkit-mask:
+        linear-gradient(#000 0 0) center / 100% calc(100% - 2 * var(--tear-size)) no-repeat,
+        conic-gradient(
+            from 135deg at top,
+            #000 90deg,
+            transparent 0
+        ) top / calc(2 * var(--tear-size)) var(--tear-size) repeat-x,
+        conic-gradient(
+            from -45deg at bottom,
+            #000 90deg,
+            transparent 0
+        ) bottom / calc(2 * var(--tear-size)) var(--tear-size) repeat-x;
+    mask:
+        linear-gradient(#000 0 0) center / 100% calc(100% - 2 * var(--tear-size)) no-repeat,
+        conic-gradient(
+            from 135deg at top,
+            #000 90deg,
+            transparent 0
+        ) top / calc(2 * var(--tear-size)) var(--tear-size) repeat-x,
+        conic-gradient(
+            from -45deg at bottom,
+            #000 90deg,
+            transparent 0
+        ) bottom / calc(2 * var(--tear-size)) var(--tear-size) repeat-x;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* ==========================================================================
@@ -363,6 +429,10 @@ body.dark-mode .subTabContent {
     overflow-wrap: anywhere;
 }
 
+#results > .tape-object {
+    margin-bottom: 20px;
+}
+
 .comparisonEntry {
     margin-bottom: 16px;
     background-color: #f4f4f4;
@@ -392,6 +462,84 @@ body.dark-mode .comparisonEntry {
     object-fit: contain;
     margin: 12px auto;
     border-radius: 6px;
+}
+
+.receiptText h3 {
+    font-family: "Bitcount Single", system-ui;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0;
+}
+
+.receiptPaper {
+    --tear-size: 12px;
+    background: linear-gradient(90deg,rgba(181, 181, 181, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(181, 181, 181, 1) 100%);
+    width: min(100%, 300px);
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding: 22px 20px;
+    -webkit-mask:
+        linear-gradient(#000 0 0) center / 100% calc(100% - 2 * var(--tear-size)) no-repeat,
+        conic-gradient(
+            from 135deg at top,
+            #000 90deg,
+            transparent 0
+        ) top / calc(2 * var(--tear-size)) var(--tear-size) repeat-x,
+        conic-gradient(
+            from -45deg at bottom,
+            #000 90deg,
+            transparent 0
+        ) bottom / calc(2 * var(--tear-size)) var(--tear-size) repeat-x;
+    mask:
+        linear-gradient(#000 0 0) center / 100% calc(100% - 2 * var(--tear-size)) no-repeat,
+        conic-gradient(
+            from 135deg at top,
+            #000 90deg,
+            transparent 0
+        ) top / calc(2 * var(--tear-size)) var(--tear-size) repeat-x,
+        conic-gradient(
+            from -45deg at bottom,
+            #000 90deg,
+            transparent 0
+        ) bottom / calc(2 * var(--tear-size)) var(--tear-size) repeat-x;
+}
+
+#results > .receiptPaper {
+    margin-bottom: 30px;
+}
+
+body.dark-mode .receiptPaper {
+    background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(181, 181, 181, 1) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.receiptWrapper {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    margin-top: 50px;
+}
+
+.receiptWrapper .receiptPaper {
+    margin-inline: 0;
+    width: 100%;
+    max-width: 100%;
+}
+
+.receiptWrapper .clearTape {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 45px;
+    z-index: 2;
+    pointer-events: none;
 }
 
 /* ==========================================================================
@@ -478,7 +626,7 @@ body.pageLoading {
         transform 0.2s ease,
         background-color 0.2s ease,
         box-shadow 0.2s ease;
-    z-index: 100;
+    z-index: 600;
 }
 
 .darkModeButton {
