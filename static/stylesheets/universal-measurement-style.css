@@ -788,15 +788,9 @@ a:focus-visible {
     .loadingSpinner {
         animation: none;
     }
-}
-
-@media (prefers-reduced-motion: reduce) {
     .tab button {
         transition: none;
     }
-}
-
-@media (prefers-reduced-motion: reduce) {
     .darkModeButton,
     .infoButton {
         transition: none;
