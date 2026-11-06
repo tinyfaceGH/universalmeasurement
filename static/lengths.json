@@ -126,6 +126,15 @@
             "image": "/static/images/rolling pin.png"
         },
         {
+            "item": "Chandra Bahadur Dangi",
+            "units": "centimeter",
+            "type": "tall",
+            "length": 56.6,
+            "useIf": 1,
+            "sentencePortion": "_ times the height of Chandra Bahadur Dangi, the shortest man ever documented.",
+            "image": "/static/images/shortest man.png"
+        },
+        {
             "item": "Rain Umbrella",
             "units": "inch",
             "type": "long",
@@ -162,6 +171,24 @@
             "image": "/static/images/adult man.png"
         },
         {
+            "item": "California King-Sized Bed",
+            "units": "inch",
+            "type": "long",
+            "length": 84,
+            "useIf": 1,
+            "sentencePortion": "The lengths of _ California king-sized beds.",
+            "image": "/static/images/california bed.png"
+        },
+        {
+            "item": "Robert Pershing Wadlow",
+            "units": "centimeter",
+            "type": "tall",
+            "length": 269,
+            "useIf": 1,
+            "sentencePortion": "_ times the height of Robert Pershing Wadlow, the tallest man ever documented.",
+            "image": "/static/images/tallest man.png"
+        },
+        {
             "item": "U.S. School Bus",
             "units": "foot",
             "type": "long",
@@ -178,6 +205,15 @@
             "useIf": 0.5,
             "sentencePortion": "The length of _ Olympic-size swimming pools.",
             "image": "/static/images/olympic-sized swimming pool.jpg"
+        },
+        {
+            "item": "Rhode Island",
+            "units": "mile",
+            "type": "in distance",
+            "length": 48,
+            "useIf": 0.5,
+            "sentencePortion": "_ times the length of Rhode Island, north to south.",
+            "image": "/static/images/rhode island.png"
         },
         {
             "item": "Earth",

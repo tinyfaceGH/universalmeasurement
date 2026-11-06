@@ -33,6 +33,14 @@
             "image": "/static/images/teaspoon of sugar.png"
         },
         {
+            "item": "Scottie Dog",
+            "units": "gram",
+            "weight": 11,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ scottie dog monopoly pieces.",
+            "image": "/static/images/scottie dog monopoly piece.png"
+        },
+        {
             "item": "AA Battery",
             "units": "gram",
             "weight": 23,
@@ -121,6 +129,14 @@
             "image": "/static/images/giant panda.png"
         },
         {
+            "item": "Male Lion",
+            "units": "pound",
+            "weight": 400,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ adult male lions.",
+            "image": "/static/images/male lion.png"
+        },
+        {
             "item": "Grand Piano",
             "units": "kilogram",
             "weight": 300,
@@ -135,6 +151,14 @@
             "useIf": 1,
             "sentencePortion": "The weight of _ adult horses.",
             "image": "/static/images/horse.png"
+        },
+        {
+            "item": "Clydesdale Horse",
+            "units": "pound",
+            "weight": 2000,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ Clydesdale horses, the largest horse breed.",
+            "image": "/static/images/clydesdale horse.png"
         },
         {
             "item": "Passenger Car",
@@ -159,6 +183,14 @@
             "useIf": 0.5,
             "sentencePortion": "The weight of _ adult blue whales.",
             "image": "/static/images/blue whale.png"
+        },
+        {
+            "item": "A Fully-Loaded Boeing 747",
+            "units": "pound",
+            "weight": 735000,
+            "useIf": 1,
+            "sentencePortion": "The weight of _ fully loaded Boeing 747s at maximum takeoff weight.",
+            "image": "/static/images/boeing 747.png"
         }
     ]
 }

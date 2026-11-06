@@ -82,6 +82,15 @@
             "image": "/static/images/soda can.png"
         },
         {
+            "item": "Highball Glass",
+            "units": "ounce",
+            "type": "in volume",
+            "volume": 14,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ highball glasses.",
+            "image": "/static/images/highball glass.png"
+        },
+        {
             "item": "Single-Use Water Bottle",
             "units": "milliliter",
             "type": "in volume",
@@ -98,6 +107,15 @@
             "useIf": 1,
             "sentencePortion": "The volume of _ standard non-alcoholic wine bottles.",
             "image": "/static/images/non alcoholic wine bottle.png"
+        },
+        {
+            "item": "7-Eleven Big Gulp",
+            "units": "ounce",
+            "type": "in volume",
+            "volume": 32,
+            "useIf": 1,
+            "sentencePortion": "The volume of _ 7-Eleven Big Gulp cups.",
+            "image": "/static/images/big gulp.png"
         },
         {
             "item": "Carton of Orange Juice",
@@ -172,6 +190,15 @@
             "image": "/static/images/water tanker truck.jpg"
         },
         {
+            "item": "Water Processed Per Second in the Hoover Dam",
+            "units": "gallon",
+            "type": "in average volume",
+            "volume": 56100,
+            "useIf": 0.01,
+            "sentencePortion": "_ times the average amount of water processed by the Hoover Dam every second.",
+            "image": "/static/images/hoover dam.png"
+        },
+        {
             "item": "Olympic-Size Swimming Pool",
             "units": "kiloliter",
             "type": "in volume",
@@ -179,6 +206,15 @@
             "useIf": 0.5,
             "sentencePortion": "The volume of _ Olympic-size swimming pools.",
             "image": "/static/images/olympic-sized swimming pool.jpg"
+        },
+        {
+            "item": "The Mediterranean Sea",
+            "units": "gallon",
+            "type": "in estimated volume",
+            "volume": 780890000000000000,
+            "useIf": 0.01,
+            "sentencePortion": "_ times the estimated volume of the Mediterranean Sea.",
+            "image": "/static/images/mediterranean sea.png"
         },
         {
             "item": "Earth's Ocean",

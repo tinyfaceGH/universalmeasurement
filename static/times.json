@@ -1,6 +1,14 @@
 {
     "times": [
         {
+            "item": "Time Taken to Brush Your Teeth",
+            "units": "minute",
+            "time": 2,
+            "useIf": 1,
+            "sentencePortion": "_ times the time it takes to brush your teeth.",
+            "image": "/static/images/brush teeth.png"
+        },
+        {
             "item": "Sunlight Traveling from the Sun to Earth",
             "units": "minute",
             "time": 8.3,
@@ -9,12 +17,44 @@
             "image": "/static/images/sunlight traveling from the sun to earth.png"
         },
         {
+            "item": "Team Fabulous 2",
+            "units": "second",
+            "time": 1041,
+            "useIf": 1,
+            "sentencePortion": "_ times as long as the animation 'Team Fabulous 2' by kitty0706.",
+            "image": "/static/images/team fabulous.png"
+        },
+        {
+            "item": "Deadlock Match",
+            "units": "minute",
+            "time": 36,
+            "useIf": 1,
+            "sentencePortion": "_ times the average length of a match in Valve's upcoming hero shooter, Deadlock.",
+            "image": "/static/images/deadlock.png"
+        },
+        {
+            "item": "Weezer's Blue Album",
+            "units": "second",
+            "time": 2496,
+            "useIf": 1,
+            "sentencePortion": "_ times as long as a full listen of Weezer's Blue Album.",
+            "image": "/static/images/weezer.png"
+        },
+        {
             "item": "Regulation Soccer Match",
             "units": "minute",
             "time": 90,
             "useIf": 1,
             "sentencePortion": "_ times the length of a regulation soccer match, excluding stoppage and extra time.",
             "image": "/static/images/soccer match.jpg"
+        },
+        {
+            "item": "Average Time Taken to Create a F.A.T.A.L Character",
+            "units": "hour",
+            "time": 10,
+            "useIf": 1,
+            "sentencePortion": "_ times the average amount of time taken to do the 400+ dice rolls required to create a character in the notorious TTRPG, F.A.T.A.L.",
+            "image": "/static/images/fatal.png"
         },
         {
             "item": "Lifespan Of A Mayfly",
@@ -33,6 +73,14 @@
             "image": "/static/images/solar day.png"
         },
         {
+            "item": "A Read of Homestuck",
+            "units": "hour",
+            "time": 120,
+            "useIf": 1,
+            "sentencePortion": "_ times as long as a thorough read of the webcomic, Homestuck.",
+            "image": "/static/images/homestuck.png"
+        },
+        {
             "item": "Lifespan Of A Housefly",
             "units": "day",
             "time": 30,
@@ -47,6 +95,14 @@
             "useIf": 1,
             "sentencePortion": "_ times as long as the average lifespan of a common house mouse.",
             "image": "/static/images/house mouse.png"
+        },
+        {
+            "item": "The Wait for Silksong's Release",
+            "units": "day",
+            "time": 2394,
+            "useIf": 1,
+            "sentencePortion": "_ times as long as the wait between the announcement and release of Hollow Knight: Silksong.",
+            "image": "/static/images/silksong.png"
         },
         {
             "item": "Lifespan Of A Domestic Dog",
