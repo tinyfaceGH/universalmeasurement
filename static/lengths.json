@@ -108,6 +108,15 @@
             "image": "/static/images/kirby.png"
         },
         {
+            "item": "Minecraft Trapdoor (closed)",
+            "units": "centimeter",
+            "type": "tall",
+            "length": 25,
+            "useIf": 1,
+            "sentencePortion":"The height of _ closed Minecraft trapdoors.",
+            "image": "/static/images/trapdoor.png"
+        },
+        {
             "item": "American Ruler",
             "units": "inch",
             "type": "long",
