@@ -542,6 +542,44 @@ body.dark-mode .receiptPaper {
     pointer-events: none;
 }
 
+.tooltip {
+    display: block;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.tooltip-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;    
+}
+
+.tooltip-content {
+    display: none;
+    padding: 10px 16px;
+    margin-top: 8px;
+    max-width: min(100%, 400px);
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    overflow-wrap: anywhere;
+    border: 1px solid #888;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode .tooltip-content {
+    background-color: #333;
+    color: #f4f4f4;
+    border-color: #888;
+}
+
 /* ==========================================================================
    INITIAL PAGE AND CALCULATION LOADING
    ========================================================================== */
