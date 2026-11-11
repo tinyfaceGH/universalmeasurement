@@ -1551,6 +1551,10 @@ async function universalMeasurementConversion(unitsList) {
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.length)} ${pluralizeUnit(entry.units, entry.length)} ${measurementType}`;
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -1563,7 +1567,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <button type="button" class="tooltip" aria-label="Show measurement for one ${entry.item}" aria-expanded="false">
+                                ${imageHTML}
+                            </button>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -1731,9 +1742,12 @@ async function universalMeasurementConversion(unitsList) {
 
         if (measurementComparisons.length > 0) {
             comparisonResults += `<div class="tape-h2">For reference, that's roughly:<br></div>`;
-
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.weight)} ${pluralizeUnit(entry.units, entry.weight)} ${measurementType}`
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -1746,7 +1760,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <button type="button" class="tooltip" aria-label="Show measurement for one ${entry.item}" aria-expanded="false">
+                                ${imageHTML}
+                            </button>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -1918,6 +1939,10 @@ async function universalMeasurementConversion(unitsList) {
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.volume)} ${pluralizeUnit(entry.units, entry.volume)} ${measurementType}`
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -1930,7 +1955,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <button type="button" class="tooltip" aria-label="Show measurement for one ${entry.item}" aria-expanded="false">
+                                ${imageHTML}
+                            </button>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -2102,6 +2134,10 @@ async function universalMeasurementConversion(unitsList) {
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.volume)} ${pluralizeUnit(entry.units, entry.volume)} ${measurementType}`
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -2114,7 +2150,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <button type="button" class="tooltip" aria-label="Show measurement for one ${entry.item}" aria-expanded="false">
+                                ${imageHTML}
+                            </button>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -2189,6 +2232,10 @@ async function universalMeasurementConversion(unitsList) {
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.time)} ${pluralizeUnit(entry.units, entry.time)} ${measurementType}`
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -2201,7 +2248,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <button type="button" class="tooltip" aria-label="Show measurement for one ${entry.item}" aria-expanded="false">
+                                ${imageHTML}
+                            </button>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -2357,6 +2411,10 @@ async function universalMeasurementConversion(unitsList) {
 
             for (const entry of measurementComparisons) {
                 const formattedQuotient = formatNumber(entry.quotient);
+                const measurementType = entry.type 
+                    ? entry.type
+                    : "";
+                const tooltipFormatted = `${entry.item}: ${formatNumber(entry.temperature)} ${pluralizeUnit(entry.units, entry.temperature)} ${measurementType}`
                 const imageHTML = entry.image
                     ? `<img
                         src="${entry.image}"
@@ -2369,7 +2427,14 @@ async function universalMeasurementConversion(unitsList) {
                 comparisonResults += `
                     <div class="comparisonEntry">
                         <h2>${entry.item} (x ${formattedQuotient})</h2>
-                        ${imageHTML}
+                        <span class="tooltip-container">
+                            <a href="#" class="tooltip">
+                                ${imageHTML}
+                            </a>
+                            <span class="tooltip-content">
+                                ${tooltipFormatted}
+                            </span>
+                        </span>
                         <h3>${entry.sentence}</h3>
                     </div>
                 `;
@@ -2426,7 +2491,14 @@ function measurementComparison(unitsSI, unit, jsonData, type) {
                 item: item.item,
                 quotient: comparisonQuotient,
                 sentence: formattedSentence,
-                image: item.image || null
+                image: item.image || null,
+                units: item.units,
+                type: item.type,
+                length: item.length,
+                weight: item.weight,
+                volume: item.volume,
+                time: item.time,
+                temperature: item.temperature
             };
 
             comparisons.push(comparisonObject);
@@ -2930,6 +3002,17 @@ function refreshTapeHeadings() {
     }
 }
 
+// This function closes all open tooltips
+function closeTooltips() {
+    results.querySelectorAll(".tooltip-content").forEach(tooltip => {
+        tooltip.style.display = "none";
+    });
+
+    results.querySelectorAll(".tooltip").forEach(button => {
+        button.setAttribute("aria-expanded", "false");
+    });
+}
+
 // Event listeners
 /*
 kelvinElem.addEventListener("input", () => {
@@ -3092,3 +3175,65 @@ window.addEventListener("resize", () => {
         tapeResizeFrame = null;
     });
 });
+
+// Image tooltip event listener
+results.addEventListener("click", function(event) {
+    // Determine if user has clicked on a comparison image
+    const tooltipButton = event.target.closest(".tooltip");
+
+    // Ignore clicks if it wasn't, and close other tooltips as well
+    if (!tooltipButton || !results.contains(tooltipButton)) {
+        closeTooltips();
+        return;
+    }
+
+    event.preventDefault();
+
+    // Find content that goes with this tooltip
+    const tooltipContainer = tooltipButton.closest(".tooltip-container");
+    if (!tooltipContainer) {
+        return;
+    }
+
+    const tooltipContent = tooltipContainer.querySelector(".tooltip-content");
+    if (!tooltipContent) {
+        return;
+    }
+
+    // Remember whether the clicked tooltip was already open
+    const wasOpen = tooltipContent.style.display === "block";
+
+    // Close other tooltips
+    closeTooltips();
+
+    // Open the clicked tooltip ONLY IF it wasn't already open
+    if (!wasOpen) {
+        tooltipContent.style.display = "block";
+        tooltipButton.setAttribute("aria-expanded", "true");
+    }
+});
+
+// Image tooltip event listener code utilizes "cash", a lightweight jQuery alternative, and it's usage is adapted from sadness97.
+/*
+$(".tooltip").on("click", function(event) {
+    var tooltipContent = $(this).parent().children(".tooltip-content");
+    if (tooltipContent.css("display") === "none") {
+        var pos = $(this).position();
+        var left = pos.left;
+        var top = pos.top;
+        tooltipContent.css({
+            "display": "inline-block",
+            "top": top,
+            "left": left
+        });
+        event.preventDefault();
+    } else {
+        tooltipContent.css("display", "none");
+        event.preventDefault();
+    }
+});
+
+$("span.tooltip-content").on("click", function(event) {
+    $(this).css("display", "none");
+});
+*/
